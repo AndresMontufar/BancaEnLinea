@@ -4,3 +4,4 @@
 # Hilbert Josue Perucho Ramirez - 201313889
 # Carlos Roberto Jiménez Pérez - 201504143
 # Christopher Jhoanis Soto Cifuentes - 201602569
+# Jorge Mauricio Vasquez Cos - 201503421
