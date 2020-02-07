@@ -3,3 +3,4 @@
 # Andrés Alejandro Montúfar Cordero - 201503797
 # Hilbert Josue Perucho Ramirez - 201313889
 # Carlos Roberto Jiménez Pérez - 201504143
+# Christopher Jhoanis Soto Cifuentes - 201602569
