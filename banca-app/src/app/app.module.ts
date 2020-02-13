@@ -7,9 +7,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+      AppComponent,
+      RegistroUsuarioComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
