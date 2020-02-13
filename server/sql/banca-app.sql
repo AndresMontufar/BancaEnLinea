@@ -1,7 +1,7 @@
 ﻿create database banca;
 use banca;
 CREATE TABLE `banca`.`usuario` (
-  `carnet` INT NOT NULL PRIMARY KEY,
+  `carnet` INT NOT NULL,
   `nombre` VARCHAR(100) NOT NULL,
   `apellido` VARCHAR(100) NOT NULL,
   `dpi` BIGINT(20) NOT NULL,
@@ -9,8 +9,8 @@ CREATE TABLE `banca`.`usuario` (
   `contrasena` VARCHAR(100) NOT NULL,
   `fecha_nac` DATETIME NOT NULL,
   PRIMARY KEY (`carnet`),
-  UNIQUE INDEX `correo_UNIQUE` (`correo` ASC) VISIBLE,
-  UNIQUE INDEX `dpi_UNIQUE` (`dpi` ASC) VISIBLE);
+  UNIQUE INDEX `correo_UNIQUE` (`correo` ASC),
+  UNIQUE INDEX `dpi_UNIQUE` (`dpi` ASC));
   
   CREATE TABLE `banca`.`tipo_cuenta` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -29,9 +29,9 @@ CREATE TABLE `banca`.`estado_cuenta` (
   `saldo` DECIMAL(14,6) NOT NULL,
   `estado` INT NOT NULL,
   PRIMARY KEY (`no_cuenta`),
-  INDEX `fk_tipo_tipo_cuenta_idx` (`tipo_id` ASC) VISIBLE,
-  INDEX `fk_usuario_usuario_id_idx` (`usuario_carnet` ASC) VISIBLE,
-  INDEX `fk_estado_cuenta_estado_idx` (`estado` ASC) VISIBLE,
+  INDEX `fk_tipo_tipo_cuenta_idx` (`tipo_id` ASC),
+  INDEX `fk_usuario_usuario_id_idx` (`usuario_carnet` ASC),
+  INDEX `fk_estado_cuenta_estado_idx` (`estado` ASC),
   CONSTRAINT `fk_tipo_tipo_cuenta`
     FOREIGN KEY (`tipo_id`)
     REFERENCES `banca`.`tipo_cuenta` (`id`)
