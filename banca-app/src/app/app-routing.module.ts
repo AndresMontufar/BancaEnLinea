@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {RegistroUsuarioComponent} from './componentes/registro-usuario/registro-usuario.component';
+import {LoginComponent} from './componentes/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'home',
