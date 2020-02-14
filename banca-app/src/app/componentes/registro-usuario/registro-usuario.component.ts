@@ -9,14 +9,19 @@ import { RegistroUsuarioService } from '../../sevicios/registro-usuario.service'
 export class RegistroUsuarioComponent implements OnInit {
 
   constructor(private usuarioservice: RegistroUsuarioService) { }
+
+  /*
   publicar(){
-    this.usuarioservice.GuardarInfo("hola").subscribe(
+    this.usuarioservice.GuardarInfo('hola').subscribe(
         res =>{
           console.log(res);
         },
         err => console.error(err)
     );
   }
+  */
+
+  // adsasdasdas
   ngOnInit() {}
 
 }
