@@ -1,9 +1,9 @@
 export default {
 
     database: {
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
+        host: '54.200.138.95',
+        user: 'Analisis_root',
+        password: 'Analisis',
         database: 'banca'
     }
 }
