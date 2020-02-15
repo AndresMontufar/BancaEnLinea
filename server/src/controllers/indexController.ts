@@ -1,6 +1,7 @@
 import { Request, Response} from 'express';
 
 import pool from '../database'
+import jwt from "jsonwebtoken"
 
 class IndexController {
 
@@ -22,15 +23,40 @@ class IndexController {
             validPassword = (password === user.contrasena);
             if(validPassword)
             {
+                const token: string = jwt.sign({_id : carnet}, 'tokentest',{  // crea token
+                    expiresIn: 60 * 60                               // el token expira en 60 minutos
+                })
+                res.header('auth-token',token).send(validPassword);  // envia token al cliente atraves del header
+                                                                     // en atributo llamado auth-token
                 console.log('El usuario es valido');
             } 
             else
             {
+                res.send(validPassword);
                 console.log('El usuario es invalido');
-            }  
-            console.log(validPassword);       
-        } 
-        res.send(validPassword);
+            }        
+        }
+        else
+        {
+            res.send(validPassword); 
+        }     
+        console.log(validPassword);         
+    }
+
+    public async create(req: Request, res: Response) {
+         res.send('create');       
+    }
+
+    public async read(req: Request, res: Response) {
+        res.send('read');       
+    }
+
+    public async update(req: Request, res: Response) {
+        res.send('update');       
+    }
+
+    public async delete(req: Request, res: Response) {
+        res.send('delete');       
     }
 }
 

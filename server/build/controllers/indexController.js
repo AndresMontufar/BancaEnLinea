@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 class IndexController {
     //enviar json con la siguiente estructura para login, en metodo post, ruta / 
     //{
@@ -29,14 +30,42 @@ class IndexController {
                 const user = rows[0];
                 validPassword = (password === user.contrasena);
                 if (validPassword) {
+                    const token = jsonwebtoken_1.default.sign({ _id: carnet }, 'tokentest', {
+                        expiresIn: 60 * 60 // el token expira en 60 minutos
+                    });
+                    res.header('auth-token', token).send(validPassword); // envia token al cliente atraves del header
+                    // en atributo llamado auth-token
                     console.log('El usuario es valido');
                 }
                 else {
+                    res.send(validPassword);
                     console.log('El usuario es invalido');
                 }
-                console.log(validPassword);
             }
-            res.send(validPassword);
+            else {
+                res.send(validPassword);
+            }
+            console.log(validPassword);
+        });
+    }
+    create(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send('create');
+        });
+    }
+    read(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send('read');
+        });
+    }
+    update(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send('update');
+        });
+    }
+    delete(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send('delete');
         });
     }
 }
