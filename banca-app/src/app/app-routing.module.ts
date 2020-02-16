@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {RegistroUsuarioComponent} from './componentes/registro-usuario/registro-usuario.component';
 import {LoginComponent} from './componentes/login/login.component';
+import {PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuario.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'Registro',
     component: RegistroUsuarioComponent
+  },
+  {
+    path: 'PerfilUsuario',
+    component: PerfilUsuarioComponent
   }
 ];
 
