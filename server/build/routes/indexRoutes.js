@@ -18,6 +18,8 @@ class IndexRoutes {
         this.router.get('/read', validateToken_1.tokenValidation, indexController_1.indexController.read);
         this.router.post('/update', validateToken_1.tokenValidation, indexController_1.indexController.update);
         this.router.delete('/delete', validateToken_1.tokenValidation, indexController_1.indexController.delete);
+        //ruta pra crear usuario
+        this.router;
     }
 }
 const indexRoutes = new IndexRoutes();

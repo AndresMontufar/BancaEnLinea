@@ -1,7 +1,7 @@
-import express, {Application} from 'express';
-
+    import express, {Application} from 'express';
+import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
-
+import userRoutes from './routes/userRoutes';
 class Server{
 
     public app: Application;
@@ -16,10 +16,11 @@ class Server{
         this.app.set('port', process.env.PORT || 3000);
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended: false}));
-    }
+        this.app.use(cors());    }
 
     routes(): void{
         this.app.use('/', indexRoutes);
+        this.app.use('/api/user',userRoutes)
     }
 
     start(): void{

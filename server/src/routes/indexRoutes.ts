@@ -21,6 +21,9 @@ class IndexRoutes {
         this.router.get('/read',    tokenValidation ,indexController.read);
         this.router.post('/update', tokenValidation ,indexController.update);
         this.router.delete('/delete', tokenValidation ,indexController.delete);
+
+        //ruta pra crear usuario
+        this.router
     }
 
 }
