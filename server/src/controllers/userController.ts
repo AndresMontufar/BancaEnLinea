@@ -30,6 +30,22 @@ class userController {
 
 
     }
+
+    public async update_account(req: Request, res: Response):Promise<void> {
+        const { carnet } = req.params;
+
+        const response = await pool.query('UPDATE banca.usuario SET ? Where carnet = ?', [req.body, carnet]);
+        //console.log(response);
+        if(response.changedRows > 0)
+        {
+            res.send(true);
+        }
+        else
+        {
+            res.send(false); 
+        }
+              
+    }
 }
 
 export const UserController = new userController();

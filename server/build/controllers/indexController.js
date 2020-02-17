@@ -15,11 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 class IndexController {
-    //enviar json con la siguiente estructura para login, en metodo post, ruta / 
-    //{
-    //    "carnet": 201503422,
-    //    "contrasena": "1234abcd"
-    //}
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const carnet = req.body.carnet;
@@ -46,26 +41,6 @@ class IndexController {
                 res.send(validPassword);
             }
             console.log(validPassword);
-        });
-    }
-    create(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            res.send('create');
-        });
-    }
-    read(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            res.send('read');
-        });
-    }
-    update(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            res.send('update');
-        });
-    }
-    delete(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            res.send('delete');
         });
     }
 }
