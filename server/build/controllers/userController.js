@@ -52,5 +52,17 @@ class userController {
             }
         });
     }
+    profile(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('SELECT * FROM banca.usuario WHERE carnet = ?', [carnet]);
+            if (response.length > 0) {
+                res.send(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.UserController = new userController();

@@ -9,7 +9,7 @@ class IndexController {
         const carnet = req.body.carnet;
         const password = req.body.contrasena;
 
-        const rows = await pool.query('SELECT *from banca.usuario Where carnet = ?', [carnet]);
+        const rows = await pool.query('SELECT * from banca.usuario Where carnet = ?', [carnet]);
         var validPassword = false;
 
         if(rows.length > 0)

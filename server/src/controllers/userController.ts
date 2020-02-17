@@ -46,6 +46,22 @@ class userController {
         }
               
     }
+
+    
+    public async profile(req: Request, res: Response):Promise<void> {
+        const { carnet } = req.params;
+
+        const response = await pool.query('SELECT * FROM banca.usuario WHERE carnet = ?', [carnet]);
+        if(response.length > 0)
+        {
+            res.send(response);
+        }
+        else
+        {
+            res.send(false); 
+        }
+              
+    }
 }
 
 export const UserController = new userController();

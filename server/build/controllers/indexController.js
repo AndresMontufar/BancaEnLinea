@@ -19,7 +19,7 @@ class IndexController {
         return __awaiter(this, void 0, void 0, function* () {
             const carnet = req.body.carnet;
             const password = req.body.contrasena;
-            const rows = yield database_1.default.query('SELECT *from banca.usuario Where carnet = ?', [carnet]);
+            const rows = yield database_1.default.query('SELECT * from banca.usuario Where carnet = ?', [carnet]);
             var validPassword = false;
             if (rows.length > 0) {
                 const user = rows[0];
