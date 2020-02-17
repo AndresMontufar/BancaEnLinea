@@ -5,11 +5,6 @@ import jwt from "jsonwebtoken"
 
 class IndexController {
 
-    //enviar json con la siguiente estructura para login, en metodo post, ruta / 
-    //{
-    //    "carnet": 201503422,
-    //    "contrasena": "1234abcd"
-    //}
     public async login (req: Request, res: Response) {
         const carnet = req.body.carnet;
         const password = req.body.contrasena;
@@ -41,22 +36,6 @@ class IndexController {
             res.send(validPassword); 
         }     
         console.log(validPassword);         
-    }
-
-    public async create(req: Request, res: Response) {
-         res.send('create');       
-    }
-
-    public async read(req: Request, res: Response) {
-        res.send('read');       
-    }
-
-    public async update(req: Request, res: Response) {
-        res.send('update');       
-    }
-
-    public async delete(req: Request, res: Response) {
-        res.send('delete');       
     }
 }
 

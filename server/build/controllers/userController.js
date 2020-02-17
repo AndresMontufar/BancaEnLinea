@@ -39,5 +39,18 @@ class userController {
             res.json({ message: 'account disabled ' });
         });
     }
+    update_account(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('UPDATE banca.usuario SET ? Where carnet = ?', [req.body, carnet]);
+            //console.log(response);
+            if (response.changedRows > 0) {
+                res.send(true);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.UserController = new userController();
