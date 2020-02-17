@@ -7,7 +7,7 @@ import {PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuari
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {

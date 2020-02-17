@@ -63,6 +63,7 @@
     "trailing-comma": false,
     "no-output-on-prefix": true,
     "no-trailing-whitespace": false,
+    "semicolon": false,
     "one-line": false,
     "comment-format": false,
     "no-inputs-metadata-property": true,
