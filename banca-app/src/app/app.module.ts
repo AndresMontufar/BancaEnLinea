@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
 import { LoginComponent} from './componentes/login/login.component';
 import { PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuario.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuar
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,

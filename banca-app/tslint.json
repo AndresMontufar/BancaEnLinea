@@ -66,6 +66,8 @@
     "semicolon": false,
     "one-line": false,
     "comment-format": false,
+    "typedef-whitespace": false,
+    "whitespace": false,
     "no-inputs-metadata-property": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
