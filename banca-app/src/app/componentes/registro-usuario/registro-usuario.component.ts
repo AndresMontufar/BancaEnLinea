@@ -20,7 +20,7 @@ export class RegistroUsuarioComponent implements OnInit {
   habilitado1: number;
   request: crearusuario;
 
-  newLogin(carnet1, nombre1, apellido1, dpi1, correo1, contrasena1, fecha_nac1, habilitado1) : crearusuario{
+  newUser(carnet1, nombre1, apellido1, dpi1, correo1, contrasena1, fecha_nac1, habilitado1) : crearusuario{
     return{
       carnet: carnet1,
       nombre: nombre1,
@@ -38,7 +38,13 @@ export class RegistroUsuarioComponent implements OnInit {
   ngOnInit() {}
 
   Regisrar(){
-
+    this.request = this.newUser(this.carnet1, this.nombre1, this.apellido1, this.dpi1, this.correo1, this.contrasena1, this.fecha_nac1, this.habilitado1);
+    this.Usuarioservice.registrar(this.request).subscribe(
+        res =>{
+          console.log(res)
+        },
+        error => console.error(error)
+    )
   }
 
 }
