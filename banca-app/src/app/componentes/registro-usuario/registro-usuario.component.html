@@ -19,53 +19,53 @@
   <!-- Carne -->
   <ion-item>
     <ion-label>Carnet:</ion-label>
-    <ion-input type="text" name="CarnetTxt"></ion-input>
+    <ion-input [(ngModel)]="carnet1" type="number" name="CarnetTxt"></ion-input>
   </ion-item>
 
   <!-- Nombres -->
   <ion-item>
     <ion-label>Nombre:</ion-label>
-    <ion-input type="text" name="NombreTxt"></ion-input>
+    <ion-input [(ngModel)]="nombre1" type="text" name="NombreTxt"></ion-input>
   </ion-item>
 
   <!-- Apellidos -->
   <ion-item>
     <ion-label>Apellido:</ion-label>
-    <ion-input type="text" name="ApellidoTxt"></ion-input>
+    <ion-input [(ngModel)]="apellido1" type="text" name="ApellidoTxt"></ion-input>
   </ion-item>
 
   <!-- DPI -->
   <ion-item>
     <ion-label>No DPI:</ion-label>
-    <ion-input type="text" name="DpiTxt"></ion-input>
+    <ion-input [(ngModel)]="dpi1" type="text" name="DpiTxt"></ion-input>
   </ion-item>
 
   <!-- Correo -->
   <ion-item>
     <ion-label>Correo:</ion-label>
-    <ion-input type="text" name="CorreoTxt"></ion-input>
+    <ion-input [(ngModel)]="correo1" type="text" name="CorreoTxt"></ion-input>
   </ion-item>
 
   <!-- Contrasena -->
   <ion-item>
     <ion-label>Contrasena:</ion-label>
-    <ion-input type="text" name="ContrasenaTxt"></ion-input>
+    <ion-input [(ngModel)]="contrasena1" type="password" name="ContrasenaTxt"></ion-input>
   </ion-item>
 
   <!-- ContrasenaR -->
   <ion-item>
     <ion-label>ContrasenaR:</ion-label>
-    <ion-input type="text" name="ContrasenaTxtR"></ion-input>
+    <ion-input [(ngModel)]="fecha_nac1" type="text" name="ContrasenaTxtR"></ion-input>
   </ion-item>
 
   <!-- FechaNacimiento -->
   <ion-item>
     <ion-label>Fecha Nacimiento:</ion-label>
-    <ion-input type="Date" name="FechaNacimientoTxt"></ion-input>
+    <ion-input [(ngModel)]="habilitado1" type="Date" name="FechaNacimientoTxt"></ion-input>
   </ion-item>
 
   <section>
-    <ion-button expand="block">
+    <ion-button expand="block" (click)="Regisrar()">
       Registrar
       <ion-icon name="checkmark-circle"></ion-icon>
     </ion-button>
