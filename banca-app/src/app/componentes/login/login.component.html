@@ -20,7 +20,7 @@
                         <div class="input-group-prepend">
                             <ion-icon class="input-group-text" ios="ios-person" md="md-person" style="width: 100%; height: 100%"></ion-icon>
                         </div>
-                        <ion-input type="number" placeholder="Carné" style="background-color: white;"></ion-input>
+                        <ion-input [(ngModel)]="carne" type="number" placeholder="Carné" style="background-color: white;"></ion-input>
                     </div>
                 </div>
                 <div style="margin-bottom: 15px">
@@ -28,11 +28,11 @@
                         <div class="input-group-prepend">
                             <ion-icon class="input-group-text" ios="ios-key" md="md-key"></ion-icon>
                         </div>
-                        <ion-input type="password" placeholder="Contraseña" style="background-color: white;"></ion-input>
+                        <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" style="background-color: white;"></ion-input>
                     </div>
                 </div>
 
-                <ion-button expand="block" color="light" size="large">Ingresar</ion-button>
+                <ion-button expand="block" color="light" size="large" (click)="validateLogin()">Ingresar</ion-button>
                 <div style="display: flex; margin-top: 15px" justify-content-center>
                     <a style="color: white"><u>Registrarse</u></a>
                 </div>
