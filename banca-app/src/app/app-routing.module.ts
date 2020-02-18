@@ -15,11 +15,11 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'home',
+    path: 'home/:carnet',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list',
+    path: 'list/:carnet',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   {
