@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+    <img src="assets/icon/logo.png"   style="width: 150px;height: 60px;margin-left: 5px;"  />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <section>
+    <header>
+      <h2>
+        Perfil de Usuario
+      </h2>
+    </header>
+  </section>
+
+  <!-- Carne -->
+  <ion-item>
+    <ion-label>Carnet:</ion-label>
+    <ion-input type="text" name="CarnetTxt"></ion-input>
+  </ion-item>
+
+  <!-- Nombres -->
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+  </ion-item>
+
+  <!-- Apellidos -->
+  <ion-item>
+    <ion-label>Apellido</ion-label>
+  </ion-item>
+
+  <!-- DPI -->
+  <ion-item>
+    <ion-label>No DPI:</ion-label>
+  </ion-item>
+
+  <!-- Correo -->
+  <ion-item>
+    <ion-label>Correo</ion-label>
+  </ion-item>
+
+  <!-- FechaNacimiento -->
+  <ion-item>
+    <ion-label>Fecha Nacimiento</ion-label>
+  </ion-item>
+
+  <section>
+    <ion-button expand="block">
+      Ver Perfil
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-button>
+
+  </section>
+
+  <ion-item>
+    <ion-label>Eliminar cuenta? Ingresa tu carne:</ion-label>
+    <ion-input type="text" name="CarnetTxtEliminar"></ion-input>
+  </ion-item>
+
+  <section>
+    <ion-button expand="block">
+      Eliminar
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-button>
+
+  </section>
+</ion-content>
+
