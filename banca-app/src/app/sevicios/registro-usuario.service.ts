@@ -19,7 +19,7 @@ export class RegistroUsuarioService {
   constructor(private http: HttpClient) { }
 
   registrar(request : crearusuario){
-    return this.http.post(`${this.API}api/user/create-user/`, request, httpOptions);
+    return this.http.post(`${this.API}api/user/create-user`, request, httpOptions);
   }
 
 }
