@@ -38,7 +38,7 @@ export class RegistroUsuarioComponent implements OnInit {
   ngOnInit() {}
 
   Regisrar(){
-    this.request = this.newUser(this.carnet1, this.nombre1, this.apellido1, this.dpi1, this.correo1, this.contrasena1, this.fecha_nac1, this.habilitado1);
+    this.request = this.newUser(this.carnet1, this.nombre1, this.apellido1, this.dpi1, this.correo1, this.contrasena1, this.fecha_nac1, 1);
     this.Usuarioservice.registrar(this.request).subscribe(
         res =>{
           console.log(res)
