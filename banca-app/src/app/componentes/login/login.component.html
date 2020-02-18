@@ -1,13 +1,5 @@
 <ion-app>
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>
-                BANCA USAC
-            </ion-title>
-        </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
+    <ion-content class="background-image">
         <div class="user_card">
             <div style="display: flex; justify-content: center">
                 <div class="brand_logo_container">
@@ -33,10 +25,10 @@
                 </div>
 
                 <ion-button expand="block" color="light" size="large" (click)="validateLogin()">Ingresar</ion-button>
-                <div style="display: flex; margin-top: 15px" justify-content-center>
-                    <a style="color: white"><u (click)="register()">Registrarse</u></a>
-                </div>
             </div>
+        </div>
+        <div style="display: flex; margin-top: 15px" justify-content-center>
+            <a style="color: white"><u (click)="register()">Registrarse</u></a>
         </div>
     </ion-content>
 </ion-app>
