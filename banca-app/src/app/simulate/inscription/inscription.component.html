@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36)">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Registro de Inscripción</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Carne -->
+      <ion-item>
+        <ion-input [(ngModel)]="carnet" type="number" placeholder="carné"></ion-input>
+      </ion-item>
+
+      <!-- Nombres -->
+      <ion-item>
+        <ion-input [(ngModel)]="name" type="text" name="NombreTxt" placeholder="Nombre"></ion-input>
+      </ion-item>
+
+      <!-- Apellidos -->
+      <ion-item>
+        <ion-input [(ngModel)]="lastName" type="text" name="ApellidoTxt" placeholder="Apellido"></ion-input>
+      </ion-item>
+
+      <!-- noTransaccion -->
+      <ion-item>
+        <ion-input [(ngModel)]="transaction" type="text" name="DpiTxt" placeholder="Transacción"></ion-input>
+      </ion-item>
+
+      <!-- Monto -->
+      <ion-item>
+        <ion-input [(ngModel)]="amount" type="text" name="CorreoTxt" placeholder="Cantidad"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="Register()">
+        Pagar
+        <ion-icon name="checkmark-circle"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

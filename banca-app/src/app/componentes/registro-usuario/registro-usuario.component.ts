@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroUsuarioService } from '../../sevicios/registro-usuario.service';
+import { RegistroUsuarioService } from '../../servicios/registro-usuario.service';
 import {crearusuario} from '../../Modelos/CrearUsuario';
 import {Router} from '@angular/router';
 

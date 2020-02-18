@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
+import {GlobalService} from './servicios/global.service'
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,15 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent{
 
-
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
+      title: 'Dashboard Principal',
+      url: `/home`,
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Transferencia',
+      url: `/list`,
       icon: 'list'
     }
   ];
@@ -27,7 +27,8 @@ export class AppComponent{
   constructor(
       private platform: Platform,
       private splashScreen: SplashScreen,
-      private statusBar: StatusBar
+      private statusBar: StatusBar,
+      private global: GlobalService
   ) {
     this.initializeApp();
   }
