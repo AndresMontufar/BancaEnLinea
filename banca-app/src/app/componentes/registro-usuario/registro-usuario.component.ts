@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistroUsuarioService } from '../../sevicios/registro-usuario.service';
 import {crearusuario} from '../../Modelos/CrearUsuario';
-
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -33,7 +33,7 @@ export class RegistroUsuarioComponent implements OnInit {
     }
   };
 
-  constructor(private Usuarioservice: RegistroUsuarioService) { }
+  constructor(private Usuarioservice: RegistroUsuarioService, private router : Router) { }
 
   ngOnInit() {}
 
@@ -45,6 +45,10 @@ export class RegistroUsuarioComponent implements OnInit {
         },
         error => console.error(error)
     )
+  }
+
+  returnLogin(){
+    this.router.navigate(['login'])
   }
 
 }
