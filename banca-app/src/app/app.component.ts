@@ -21,6 +21,11 @@ export class AppComponent{
       title: 'Transferencia',
       url: `/list`,
       icon: 'list'
+    },
+    {
+      title: 'Perfil',
+      url: `/perfil`,
+      icon: 'person'
     }
   ];
 

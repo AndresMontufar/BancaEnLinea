@@ -14,7 +14,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
 import { LoginComponent} from './componentes/login/login.component';
-import { PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuario.component';
 import {InscriptionComponent} from './simulate/inscription/inscription.component'
 
 @NgModule({
@@ -22,7 +21,6 @@ import {InscriptionComponent} from './simulate/inscription/inscription.component
       AppComponent,
       RegistroUsuarioComponent,
       LoginComponent,
-      PerfilUsuarioComponent,
       InscriptionComponent
   ],
   entryComponents: [],
