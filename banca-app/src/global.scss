@@ -26,6 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-body{
-  --ion-background-color: rgb(210, 214, 203);
+.background-image{
+  //--ion-background-color: rgb(210, 214, 203);
+  --background: url(./assets/mural.jpg) no-repeat center center / cover;
 }

@@ -1,4 +1,4 @@
-export interface Login{
+export interface crearusuario{
     carnet: number,
     nombre: string,
     apellido: string,

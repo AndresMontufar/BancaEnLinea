@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Login} from '../../Modelos/Login';
-import {LoginService} from '../../sevicios/login.service'
+import {LoginService} from '../../servicios/login.service'
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +21,7 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router : Router) { }
 
   ngOnInit() {
 
@@ -30,10 +32,16 @@ export class LoginComponent implements OnInit {
       this.request = this.newLogin(this.carne, this.password);
       this.loginService.Login(this.request).subscribe(
           res =>{
-            console.log(res)
+            if(res === true){
+              this.router.navigate([`/home/${this.request.carnet}`])
+            }
           },
           error => console.error(error)
       )
     }
+  }
+
+  register(){
+    this.router.navigate(['Registro'])
   }
 }

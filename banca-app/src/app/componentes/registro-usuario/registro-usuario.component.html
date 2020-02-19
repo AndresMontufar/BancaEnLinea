@@ -1,76 +1,64 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-    </ion-title>
-    <img src="assets/icon/logo.png"   style="width: 150px;height: 60px;margin-left: 5px;"  />
+    <ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)="returnLogin()" style="height: 30px; width: 30px"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
-  <section>
-    <header>
-        <h2>
-          Registro
-        </h2>
-    </header>
-  </section>
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36)">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Registro de Usuario</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Carne -->
+      <ion-item>
+        <ion-input [(ngModel)]="carnet1" type="number" name="CarnetTxt" placeholder="carné"></ion-input>
+      </ion-item>
 
-  <!-- Carne -->
-  <ion-item>
-    <ion-label>Carnet:</ion-label>
-    <ion-input type="text" name="CarnetTxt"></ion-input>
-  </ion-item>
+      <!-- Nombres -->
+      <ion-item>
+        <ion-input [(ngModel)]="nombre1" type="text" name="NombreTxt" placeholder="Nombre"></ion-input>
+      </ion-item>
 
-  <!-- Nombres -->
-  <ion-item>
-    <ion-label>Nombre:</ion-label>
-    <ion-input type="text" name="NombreTxt"></ion-input>
-  </ion-item>
+      <!-- Apellidos -->
+      <ion-item>
+        <ion-input [(ngModel)]="apellido1" type="text" name="ApellidoTxt" placeholder="Apellido"></ion-input>
+      </ion-item>
 
-  <!-- Apellidos -->
-  <ion-item>
-    <ion-label>Apellido:</ion-label>
-    <ion-input type="text" name="ApellidoTxt"></ion-input>
-  </ion-item>
+      <!-- DPI -->
+      <ion-item>
+        <ion-input [(ngModel)]="dpi1" type="text" name="DpiTxt" placeholder="DPI"></ion-input>
+      </ion-item>
 
-  <!-- DPI -->
-  <ion-item>
-    <ion-label>No DPI:</ion-label>
-    <ion-input type="text" name="DpiTxt"></ion-input>
-  </ion-item>
+      <!-- Correo -->
+      <ion-item>
+        <ion-input [(ngModel)]="correo1" type="text" name="CorreoTxt" placeholder="Correo"></ion-input>
+      </ion-item>
 
-  <!-- Correo -->
-  <ion-item>
-    <ion-label>Correo:</ion-label>
-    <ion-input type="text" name="CorreoTxt"></ion-input>
-  </ion-item>
+      <!-- Contrasena -->
+      <ion-item>
+        <ion-input [(ngModel)]="contrasena1" type="password" name="ContrasenaTxt" placeholder="Contraseña"></ion-input>
+      </ion-item>
 
-  <!-- Contrasena -->
-  <ion-item>
-    <ion-label>Contrasena:</ion-label>
-    <ion-input type="text" name="ContrasenaTxt"></ion-input>
-  </ion-item>
+      <!-- ContrasenaR -->
+      <ion-item>
+        <ion-input [(ngModel)]="fecha_nac1" type="text" name="ContrasenaTxtR" placeholder="Repetir la contraseña"></ion-input>
+      </ion-item>
 
-  <!-- ContrasenaR -->
-  <ion-item>
-    <ion-label>ContrasenaR:</ion-label>
-    <ion-input type="text" name="ContrasenaTxtR"></ion-input>
-  </ion-item>
+      <!-- FechaNacimiento -->
+      <ion-item>
+        <ion-input [(ngModel)]="habilitado1" type="Date" name="FechaNacimientoTxt" placeholder="Fecha de Nacimiento"></ion-input>
+      </ion-item>
 
-  <!-- FechaNacimiento -->
-  <ion-item>
-    <ion-label>Fecha Nacimiento:</ion-label>
-    <ion-input type="Date" name="FechaNacimientoTxt"></ion-input>
-  </ion-item>
-
-  <section>
-    <ion-button expand="block">
-      Registrar
-      <ion-icon name="checkmark-circle"></ion-icon>
-    </ion-button>
-
-  </section>
+      <ion-button expand="block" (click)="Regisrar()">
+        Registrar
+        <ion-icon name="checkmark-circle"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
 

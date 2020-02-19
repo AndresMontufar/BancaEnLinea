@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroUsuarioService } from '../../sevicios/registro-usuario.service';
+import { RegistroUsuarioService } from '../../servicios/registro-usuario.service';
+import {crearusuario} from '../../Modelos/CrearUsuario';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -8,20 +10,45 @@ import { RegistroUsuarioService } from '../../sevicios/registro-usuario.service'
 })
 export class RegistroUsuarioComponent implements OnInit {
 
-  constructor(private usuarioservice: RegistroUsuarioService) { }
+  carnet1: number;
+  nombre1: string;
+  apellido1: string;
+  dpi1: number;
+  correo1: string;
+  contrasena1: string;
+  fecha_nac1: string;
+  habilitado1: number;
+  request: crearusuario;
 
-  /*
-  publicar(){
-    this.usuarioservice.GuardarInfo('hola').subscribe(
-        res =>{
-          console.log(res);
-        },
-        err => console.error(err)
-    );
-  }
-  */
+  newUser(carnet1, nombre1, apellido1, dpi1, correo1, contrasena1, fecha_nac1, habilitado1) : crearusuario{
+    return{
+      carnet: carnet1,
+      nombre: nombre1,
+      apellido: apellido1,
+      dpi: dpi1,
+      correo: correo1,
+      contrasena: contrasena1,
+      fecha_nac: fecha_nac1,
+      habilitado: habilitado1
+    }
+  };
 
-  // adsasdasdas
+  constructor(private Usuarioservice: RegistroUsuarioService, private router : Router) { }
+
   ngOnInit() {}
+
+  Regisrar(){
+    this.request = this.newUser(this.carnet1, this.nombre1, this.apellido1, this.dpi1, this.correo1, this.contrasena1, this.fecha_nac1, 1);
+    this.Usuarioservice.registrar(this.request).subscribe(
+        res =>{
+          console.log(res)
+        },
+        error => console.error(error)
+    )
+  }
+
+  returnLogin(){
+    this.router.navigate(['login'])
+  }
 
 }

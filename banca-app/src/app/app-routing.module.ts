@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {RegistroUsuarioComponent} from './componentes/registro-usuario/registro-usuario.component';
 import {LoginComponent} from './componentes/login/login.component';
-import {PerfilUsuarioComponent} from './componentes/perfil-usuario/perfil-usuario.component';
+import {InscriptionComponent} from './simulate/inscription/inscription.component';
 
 const routes: Routes = [
   {
@@ -15,21 +15,28 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'home/:carnet',
+    loadChildren: () => import('./componentes/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    path: 'list/:carnet',
+    loadChildren: () => import('./componentes/list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'perfil/:carnet',
+    loadChildren: () => import('./componentes/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
     path: 'Registro',
     component: RegistroUsuarioComponent
   },
+  //simulation
   {
-    path: 'PerfilUsuario',
-    component: PerfilUsuarioComponent
+    path: 'simulateInscription',
+    component: InscriptionComponent
   }
+
+
 ];
 
 @NgModule({

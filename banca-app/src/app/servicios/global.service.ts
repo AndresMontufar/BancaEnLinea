@@ -3,10 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class RegistroUsuarioService {
+export class GlobalService {
+
+  public carne: number;
 
   constructor() { }
-  public GuardarInfo(hola){
-    return 'hola';
-  }
 }
