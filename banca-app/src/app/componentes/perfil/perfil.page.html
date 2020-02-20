@@ -1,12 +1,60 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>perfil</ion-title>
+    <ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)="returnLogin()" style="height: 30px; width: 30px"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36)">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Mi Usuario</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Carne -->
+      <ion-item>
+        <ion-input [(ngModel)]="carnet1" disabled="true" type="number" name="CarnetTxt" placeholder="carné"></ion-input>
+      </ion-item>
+
+      <!-- Nombres -->
+      <ion-item>
+        <ion-input [(ngModel)]="nombre1" disabled="{{bloqueado}}" type="text" name="NombreTxt" placeholder="Nombre"></ion-input>
+      </ion-item>
+
+      <!-- Apellidos -->
+      <ion-item>
+        <ion-input [(ngModel)]="apellido1" disabled="{{bloqueado}}" type="text" name="ApellidoTxt" placeholder="Apellido"></ion-input>
+      </ion-item>
+
+      <!-- DPI -->
+      <ion-item>
+        <ion-input [(ngModel)]="dpi1" disabled="{{bloqueado}}" type="text" name="DpiTxt" placeholder="DPI"></ion-input>
+      </ion-item>
+
+      <!-- Correo -->
+      <ion-item>
+        <ion-input [(ngModel)]="correo1" disabled="{{bloqueado}}" type="text" name="CorreoTxt" placeholder="Correo"></ion-input>
+      </ion-item>
+
+      <!-- Contrasena -->
+      <ion-item>
+        <ion-input [(ngModel)]="contrasena1" disabled="{{bloqueado}}" type="text" name="ContrasenaTxt" placeholder="Contraseña"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="Modificar()">
+        Modificar Datos  
+        <ion-icon name="refresh-circle"></ion-icon>
+      </ion-button>
+
+      <ion-button expand="block" (click)="eliminar()">
+        Eliminar Usuario
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
+
+
