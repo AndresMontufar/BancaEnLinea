@@ -15,7 +15,7 @@ class IndexController {
         if(rows.length > 0)
         {
             const user = rows[0];
-            validPassword = (password === user.contrasena && user.habilitado === true);
+            validPassword = (password === user.contrasena && user.habilitado == 1);
             if(validPassword)
             {
                 const token: string = jwt.sign({_id : carnet}, 'tokentest',{  // crea token
