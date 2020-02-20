@@ -47,7 +47,6 @@ class userController {
               
     }
 
-    
     public async profile(req: Request, res: Response):Promise<void> {
         const { carnet } = req.params;
 

@@ -23,7 +23,7 @@ class IndexController {
             var validPassword = false;
             if (rows.length > 0) {
                 const user = rows[0];
-                validPassword = (password === user.contrasena);
+                validPassword = (password === user.contrasena && user.habilitado == 1);
                 if (validPassword) {
                     const token = jsonwebtoken_1.default.sign({ _id: carnet }, 'tokentest', {
                         expiresIn: 60 * 60 // el token expira en 60 minutos
