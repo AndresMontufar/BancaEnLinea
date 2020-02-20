@@ -9,13 +9,13 @@ class IndexController {
         const carnet = req.body.carnet;
         const password = req.body.contrasena;
 
-        const rows = await pool.query('SELECT * from banca.usuario Where carnet = ? and habilitado = true', [carnet]);
+        const rows = await pool.query('SELECT * from banca.usuario Where carnet = ?', [carnet]);
         var validPassword = false;
 
         if(rows.length > 0)
         {
             const user = rows[0];
-            validPassword = (password === user.contrasena);
+            validPassword = (password === user.contrasena && user.habilitado === true);
             if(validPassword)
             {
                 const token: string = jwt.sign({_id : carnet}, 'tokentest',{  // crea token
