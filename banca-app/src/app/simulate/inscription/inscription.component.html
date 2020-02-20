@@ -1,10 +1,5 @@
-<ion-header [translucent]="true">
-
-</ion-header>
-
-
 <ion-content class="background-image">
-  <ion-card style="background-color: rgba(154,165,140,0.36)">
+  <ion-card style="background-color: rgba(154,165,140,0.36); margin-top: 25%">
     <ion-card-header>
       <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
         <h2 style="color: white"><b>Registro de Inscripción</b></h2>
@@ -18,27 +13,38 @@
 
       <!-- Nombres -->
       <ion-item>
-        <ion-input [(ngModel)]="name" type="text" name="NombreTxt" placeholder="Nombre"></ion-input>
+        <ion-input [(ngModel)]="name" type="text" placeholder="Nombre"></ion-input>
       </ion-item>
 
       <!-- Apellidos -->
       <ion-item>
-        <ion-input [(ngModel)]="lastName" type="text" name="ApellidoTxt" placeholder="Apellido"></ion-input>
+        <ion-input [(ngModel)]="lastName" type="text" placeholder="Apellido"></ion-input>
+      </ion-item>
+
+      <!-- DPI -->
+      <ion-item>
+        <ion-input [(ngModel)]="dpi" type="text" placeholder="DPI"></ion-input>
+      </ion-item>
+
+      <!-- Fecha de Nacimiento -->
+      <ion-item>
+        <ion-input [(ngModel)]="date" type="date" placeholder="Fecha de Nacimiento"></ion-input>
+      </ion-item>
+
+      <!-- Fecha de Nacimiento -->
+      <ion-item>
+        <ion-input [(ngModel)]="email" type="text" placeholder="Email"></ion-input>
       </ion-item>
 
       <!-- noTransaccion -->
       <ion-item>
-        <ion-input [(ngModel)]="transaction" type="text" name="DpiTxt" placeholder="Transacción"></ion-input>
+        <ion-input [(ngModel)]="transaction" type="text"  placeholder="Transacción"></ion-input>
       </ion-item>
 
-      <!-- Monto -->
-      <ion-item>
-        <ion-input [(ngModel)]="amount" type="text" name="CorreoTxt" placeholder="Cantidad"></ion-input>
-      </ion-item>
 
-      <ion-button expand="block" (click)="Register()">
-        Pagar
+      <ion-button expand="block" (click)="Register()" color="success">
         <ion-icon name="checkmark-circle"></ion-icon>
+        Pagar
       </ion-button>
     </ion-card-content>
   </ion-card>

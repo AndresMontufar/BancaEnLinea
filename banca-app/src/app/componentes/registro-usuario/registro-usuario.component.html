@@ -45,17 +45,17 @@
 
       <!-- ContrasenaR -->
       <ion-item>
-        <ion-input [(ngModel)]="fecha_nac1" type="text" name="ContrasenaTxtR" placeholder="Repetir la contraseña"></ion-input>
+        <ion-input type="text" name="ContrasenaTxtR" placeholder="Repetir la contraseña"></ion-input>
       </ion-item>
 
       <!-- FechaNacimiento -->
       <ion-item>
-        <ion-input [(ngModel)]="habilitado1" type="Date" name="FechaNacimientoTxt" placeholder="Fecha de Nacimiento"></ion-input>
+        <ion-input [(ngModel)]="fecha_nac1" type="Date" name="FechaNacimientoTxt" placeholder="Fecha de Nacimiento"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" (click)="Regisrar()">
-        Registrar
+      <ion-button expand="block" (click)="Registrar()" color="success">
         <ion-icon name="checkmark-circle"></ion-icon>
+        Registrar
       </ion-button>
     </ion-card-content>
   </ion-card>

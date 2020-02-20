@@ -3,6 +3,7 @@ import {GlobalService} from '../../servicios/global.service'
 import {PerfilUsuarioService} from '../../servicios/perfil-usuario.service'
 import {Router} from '@angular/router';
 import {crearusuario} from '../../Modelos/CrearUsuario';
+import {AlertController} from '@ionic/angular';
 
 
 
@@ -24,7 +25,8 @@ export class PerfilPage implements OnInit {
     bloqueado: string;
     request: crearusuario;
 
-  constructor(private perfilUsuarioServic: PerfilUsuarioService, private global: GlobalService, private router : Router) { }
+  constructor(private perfilUsuarioServic: PerfilUsuarioService, private global: GlobalService, private router : Router,
+              public alertController: AlertController) { }
 
   ngOnInit() {
       this.bloqueado = 'true';
@@ -61,8 +63,6 @@ export class PerfilPage implements OnInit {
         }
     };
 
-
-
     Modificar(){
       if(this.bloqueado == 'true'){
           this.bloqueado = 'false';
@@ -82,7 +82,7 @@ export class PerfilPage implements OnInit {
         this.request = this.newUser(this.carnet1, this.nombre1, this.apellido1, this.dpi1, this.correo1, this.contrasena1, this.fecha_nac1, this.habilitado1);
         this.perfilUsuarioServic.registrar(this.request,this.global.carne).subscribe(
             res =>{
-                console.log(res)
+                this.presentAlert('Felicidades','Datos modificados')
             },
             error => console.error(error)
         )
@@ -91,11 +91,20 @@ export class PerfilPage implements OnInit {
     eliminar(){
         this.perfilUsuarioServic.eliminar(this.global.carne).subscribe(
             res =>{
-                console.log(res)
+                this.presentAlert('Felicidades','Usuario Deshabilitado')
             },
             error => console.error(error)
         )
         this.router.navigate(['login'])
     }
 
+    async presentAlert(title, message) {
+        const alert = await this.alertController.create({
+            header: title,
+            message: message,
+            buttons: ['OK']
+        });
+
+        await alert.present();
+    }
 }

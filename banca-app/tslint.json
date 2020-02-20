@@ -70,6 +70,7 @@
     "object-literal-shorthand": false,
     "comment-format": false,
     "typedef-whitespace": false,
+    "triple-equals": false,
     "whitespace": false,
     "no-inputs-metadata-property": true,
     "no-host-metadata-property": true,
