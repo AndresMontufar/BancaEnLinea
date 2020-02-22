@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       this.request = this.newLogin(this.carne, this.password);
       this.loginService.Login(this.request).subscribe(
           res =>{
+            console.log(res);
             if(res === true){
               this.router.navigate([`/home/${this.request.carnet}`])
             }
