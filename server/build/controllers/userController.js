@@ -26,6 +26,14 @@ class userController {
             res.json({ message: 'user saved' });
         });
     }
+    create_account(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            yield database_1.default.query('INSERT INTO banca.cuenta set ?', [req.body]);
+            //  pool.query('DESCRIBE usuario');
+            res.json({ message: 'user saved' });
+        });
+    }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const users = yield database_1.default.query('SELECT * FROM  banca.usuario');

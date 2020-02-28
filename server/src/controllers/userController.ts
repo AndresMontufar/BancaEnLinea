@@ -17,6 +17,16 @@ class userController {
         res.json({message:'user saved'});
 
     }
+
+    public async create_account (req: Request, res:Response):Promise<void>{
+
+        console.log(req.body);
+        await pool.query('INSERT INTO banca.cuenta set ?',[req.body]);
+        //  pool.query('DESCRIBE usuario');
+        res.json({message:'user saved'});
+
+    }
+
     public async list(req: Request, res:Response):Promise<void>{
 
         const users= await pool.query('SELECT * FROM  banca.usuario');
