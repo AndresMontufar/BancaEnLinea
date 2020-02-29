@@ -14,6 +14,9 @@ class IndexRoutes {
         // Login - no necesita autenticacion previa para ser accedido.
         this.router.post('/', indexController.login );
 
+        //Logout - se valida que tenga autenticacion previa, debe traer token en el header del req
+        this.router.get('/', tokenValidation, indexController.logout);
+
         //ruta pra crear usuario
         this.router
     }
