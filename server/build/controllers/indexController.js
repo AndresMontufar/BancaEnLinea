@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const listblack_1 = require("../libs/listblack");
 class IndexController {
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -26,7 +27,7 @@ class IndexController {
                 validPassword = (password === user.contrasena && user.habilitado == 1);
                 if (validPassword) {
                     const token = jsonwebtoken_1.default.sign({ _id: carnet }, 'tokentest', {
-                        expiresIn: 60 * 60 // el token expira en 60 minutos
+                        expiresIn: 60 * 30 // el token expira en 30 minutos
                     });
                     res.header('auth-token', token).send(validPassword); // envia token al cliente atraves del header
                     // en atributo llamado auth-token
@@ -41,6 +42,18 @@ class IndexController {
                 res.send(validPassword);
             }
             console.log(validPassword);
+        });
+    }
+    logout(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const token = req.header('auth-token');
+            if (listblack_1.blacklist.indexOf(String(token)) >= 0) {
+                res.send(false); // false, si ya se cerro sesion
+            }
+            else {
+                listblack_1.blacklist.push(String(token)); // true, si se cierra sesion 
+                res.send(true);
+            }
         });
     }
 }
