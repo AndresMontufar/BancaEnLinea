@@ -1,15 +1,71 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      List
-    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36)">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Transferencias</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-subtitle><h3 style="color: white"><b>Cuenta origen:</b></h3></ion-card-subtitle>
+      <!-- Origen -->
+      <ion-item>
+        <ion-input type="text" name="Origentxt" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-card-subtitle><h3 style="color: white"><b>Saldo cuenta:</b></h3></ion-card-subtitle>
+      <!-- Saldo -->
+      <ion-item>
+        <ion-input type="number" disabled="true" name="Saldotxt" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-card-subtitle><h3 style="color: white"><b>Cuenta del tercero:</b></h3></ion-card-subtitle>
+      <!-- Tercero -->
+      <ion-item>
+        <ion-input type="text" name="Tercerotxt" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-card-subtitle><h3 style="color: white"><b>Monto total:</b></h3></ion-card-subtitle>
+      <!-- Monto -->
+      <ion-item>
+        <ion-input type="number" name="Montotxt" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-card-subtitle><h3 style="color: white"><b>Descripcion:</b></h3></ion-card-subtitle>
+      <!-- Descripcion -->
+      <ion-item>
+        <ion-input type="text" name="Descripciontxt" placeholder=""></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" >
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            Aceptar
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="cancelar()" color="danger">
+            <ion-icon name="close"></ion-icon>
+            Cancelar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <!--
   <ion-list>
     <ion-item *ngFor="let item of items">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
@@ -19,6 +75,8 @@
       </div>
     </ion-item>
   </ion-list>
+  -->
+
   <!--
     <div *ngIf="selectedItem" padding>
       You navigated here from <b>{{selectedItem.title }}</b>
