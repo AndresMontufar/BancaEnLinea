@@ -12,19 +12,17 @@ class userController {
 
      public async create_user (req: Request, res:Response):Promise<void>{
         console.log(req.body);
+
+         const carnet = req.body.carnet;
+         const a = 111111111111;
+         const b = 999999999999;
+         const noCuenta = Math.round(Math.random()*(b-a)+a);
+
          await pool.query('INSERT INTO banca.usuario set ?',[req.body]);
-       //  pool.query('DESCRIBE usuario');
-        res.json({message:'user saved'});
+         await pool.query('INSERT INTO banca.cuenta set no_cuenta = ?, tipo_id = ?, usuario_carnet = ?, saldo = ?, estado = ?',
+             [noCuenta, 1, carnet, 100, 1]);
 
-    }
-
-    public async create_account (req: Request, res:Response):Promise<void>{
-
-        console.log(req.body);
-        await pool.query('INSERT INTO banca.cuenta set ?',[req.body]);
-        //  pool.query('DESCRIBE usuario');
-        res.json({message:'user saved'});
-
+         res.json({text: 'user and account created'});
     }
 
     public async list(req: Request, res:Response):Promise<void>{

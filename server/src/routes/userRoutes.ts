@@ -17,8 +17,6 @@ class userRoutes {
         this.router.get('/create-user',UserController.list); // Lista de usuarios creados
         this.router.put('/disabled_account/:carnet',UserController.disabled_account); // Deshabilitar cuenta
         this.router.put('/update-account/:carnet',UserController.update_account); // Editar el perfil
-        this.router.post('/create-account',UserController.create_account); // Crear Cuenta
-
         this.router.get('/profile/:carnet',UserController.profile); //Obtener el perfil del usuario con su carnet
 
     }

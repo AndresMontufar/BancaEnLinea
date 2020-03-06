@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="" />
+    <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,9 +35,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="ts.external.directory.path" value="C:\Users\50242\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\193.6015.39\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,6 +56,9 @@
       <option name="presentableId" value="Default" />
       <updated>1581746167304</updated>
       <workItem from="1581746187853" duration="18650000" />
+      <workItem from="1582904431441" duration="6153000" />
+      <workItem from="1583160399555" duration="8007000" />
+      <workItem from="1583430840212" duration="2843000" />
     </task>
     <servers />
   </component>
@@ -51,29 +66,49 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1581814159436">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583165789003">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583165789003" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1582907482097">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582907482097" />
     <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581814159436" />
-    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1581814159436">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1582907482097">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582907482097" />
     <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581814159436" />
-    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1581814159436">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1582907482096">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582907482096" />
     <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581814159436" />
-    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1581814159436">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1582907482097">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582907482097" />
     <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581814159436" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1581747148227">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581747148227" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1583163261480">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1583163261480" />
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581746199849">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581746199849" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1582953255133">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582953255133" />
+    <state x="346" y="49" key="search.everywhere.popup" timestamp="1583162933351">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583162933351" />
   </component>
 </project>
