@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
 import { LoginComponent} from './componentes/login/login.component';
 import {InscriptionComponent} from './simulate/inscription/inscription.component'
+import {TransactionComponent} from './simulate/transaction/transaction.component';
 
 @NgModule({
   declarations: [
       AppComponent,
       RegistroUsuarioComponent,
       LoginComponent,
-      InscriptionComponent
+      InscriptionComponent,
+      TransactionComponent
   ],
   entryComponents: [],
   imports: [

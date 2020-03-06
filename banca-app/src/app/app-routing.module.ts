@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {RegistroUsuarioComponent} from './componentes/registro-usuario/registro-usuario.component';
 import {LoginComponent} from './componentes/login/login.component';
 import {InscriptionComponent} from './simulate/inscription/inscription.component';
+import {TransactionComponent} from './simulate/transaction/transaction.component';
 
 const routes: Routes = [
   {
@@ -32,8 +33,12 @@ const routes: Routes = [
   },
   //simulation
   {
-    path: 'simulateInscription',
+    path: 'simularInscripcion',
     component: InscriptionComponent
+  },
+  {
+    path: 'simularTransaccion',
+    component: TransactionComponent
   }
 
 

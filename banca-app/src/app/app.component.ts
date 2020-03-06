@@ -26,7 +26,7 @@ export class AppComponent{
       title: 'Perfil',
       url: `/perfil`,
       icon: 'person'
-    }
+    },
   ];
 
   constructor(

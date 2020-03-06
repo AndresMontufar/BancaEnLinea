@@ -1,0 +1,41 @@
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36); margin-top: 25%">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Transacción</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Carne -->
+      <ion-item>
+        <ion-input [(ngModel)]="account" type="number" placeholder="Cuenta"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="carnet" type="number" placeholder="Carné"></ion-input>
+      </ion-item>
+
+      <!-- Nombres -->
+      <ion-item>
+        <ion-input [(ngModel)]="amount" type="number" placeholder="Monto"></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="Deposit()" color="success">
+            <ion-icon name="cash"></ion-icon>
+            Depositar
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="Withdraw()" color="danger">
+            <ion-icon name="cash"></ion-icon>
+            Retirar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

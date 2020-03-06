@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TransferenciaComponent } from './transferencia.component';
+import { TransactionComponent } from './transaction.component';
 
-describe('TransferenciaComponent', () => {
-  let component: TransferenciaComponent;
-  let fixture: ComponentFixture<TransferenciaComponent>;
+describe('TransactionComponent', () => {
+  let component: TransactionComponent;
+  let fixture: ComponentFixture<TransactionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransferenciaComponent ],
+      declarations: [ TransactionComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TransferenciaComponent);
+    fixture = TestBed.createComponent(TransactionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

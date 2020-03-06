@@ -91,7 +91,7 @@ export class PerfilPage implements OnInit {
     eliminar(){
         this.perfilUsuarioServic.eliminar(this.global.carne).subscribe(
             res =>{
-                this.presentAlert('Felicidades','Usuario Deshabilitado')
+                this.presentAlert('Sistema','Usuario Deshabilitado')
             },
             error => console.error(error)
         )
