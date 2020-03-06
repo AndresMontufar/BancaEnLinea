@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Login} from '../../Modelos/Login';
 import {LoginService} from '../../servicios/login.service'
 import {Router} from '@angular/router';
+import {AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  constructor(private loginService: LoginService, private router : Router) { }
+  constructor(private loginService: LoginService, private router : Router,
+              public alertController: AlertController) { }
 
   ngOnInit() {
 
@@ -36,10 +38,23 @@ export class LoginComponent implements OnInit {
             if(res === true){
               this.router.navigate([`/home/${this.request.carnet}`])
             }
+            else{
+              this.presentAlert('Ups...','Usuario Incorrecto o Deshabilitado')
+            }
           },
           error => console.error(error)
       )
     }
+  }
+
+  async presentAlert(title, message) {
+    const alert = await this.alertController.create({
+      header: title,
+      message: message,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 
   register(){

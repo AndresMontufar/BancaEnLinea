@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  /*
+
   private selectedItem: any;
   private icons = [
     'flask',
@@ -32,7 +32,7 @@ export class ListPage implements OnInit {
       });
     }
   }
-  */
+
 
   ngOnInit() {
   }
