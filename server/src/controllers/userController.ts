@@ -30,6 +30,13 @@ class userController {
 
 
     }
+    public async activate_account(req: Request, res:Response):Promise<void>{
+        const { carnet } = req.params;
+        await  pool.query('UPDATE banca.usuario SET habilitado=1 WHERE carnet=?',[carnet]);
+        res.json({message:'account disabled '});
+
+
+    }
 
     public async update_account(req: Request, res: Response):Promise<void> {
         const { carnet } = req.params;
