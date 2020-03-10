@@ -41,6 +41,21 @@ class accountController {
             res.send(false);
         }
     }
+
+    public async get_account(req: Request, res: Response):Promise<void> {   // obtener cuenta
+        const { carnet } = req.params;
+
+        const response = await pool.query('SELECT * from banca.cuenta where usuario_carnet = ? ', [carnet]);
+
+        if(response.length > 0)
+        {
+            res.send(response);
+        }
+        else
+        {
+            res.send(false);
+        }
+    }
 }
 
 export const AccountController = new accountController();
