@@ -18,6 +18,8 @@ class userRoutes {
         this.router.put('/disabled_account/:carnet',UserController.disabled_account); // Deshabilitar cuenta
         this.router.put('/activate_account/:carnet',UserController.activate_account); // Habilitar cuenta
         this.router.put('/update-account/:carnet',UserController.update_account); // Editar el perfil
+ 
+
         this.router.get('/profile/:carnet',UserController.profile); //Obtener el perfil del usuario con su carnet
 
     }

@@ -21,13 +21,9 @@ class userController {
     create_user(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
-            const carnet = req.body.carnet;
-            const a = 111111111111;
-            const b = 999999999999;
-            const noCuenta = Math.round(Math.random() * (b - a) + a);
             yield database_1.default.query('INSERT INTO banca.usuario set ?', [req.body]);
-            yield database_1.default.query('INSERT INTO banca.cuenta set no_cuenta = ?, tipo_id = ?, usuario_carnet = ?, saldo = ?, estado = ?', [noCuenta, 1, carnet, 100, 1]);
-            res.json({ text: 'user and account created' });
+            //  pool.query('DESCRIBE usuario');
+            res.json({ message: 'user saved' });
         });
     }
     list(req, res) {
