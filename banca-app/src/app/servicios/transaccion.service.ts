@@ -17,7 +17,7 @@ export class TransaccionService {
   constructor(private http: HttpClient) {}
 
   public Deposit(request, carnet) {
-    return this.http.put(`${this.API}api/account/deposit/${carnet}`, request, httpOptions);
+    return this.http.put(`${this.API}api/account/deposit-account/${carnet}`, request, httpOptions);
   }
 
   public Withdraw(request, carnet) {

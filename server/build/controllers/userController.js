@@ -43,6 +43,13 @@ class userController {
             res.json({ message: 'account disabled ' });
         });
     }
+    activate_account(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            yield database_1.default.query('UPDATE banca.usuario SET habilitado=1 WHERE carnet=?', [carnet]);
+            res.json({ message: 'account disabled ' });
+        });
+    }
     update_account(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { carnet } = req.params;

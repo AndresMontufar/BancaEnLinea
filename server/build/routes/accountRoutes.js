@@ -9,6 +9,8 @@ class accountRoutes {
     }
     config() {
         this.router.put('/withdraw-account/:carnet', accountController_1.AccountController.withdraw_account); // retiro de dinero
+        this.router.put('/deposit-account/:carnet', accountController_1.AccountController.deposit_account); // deposito de dinero
+        this.router.get('/get-account/:carnet', accountController_1.AccountController.get_account); // obtener cuenta
     }
 }
 const AccountRoutes = new accountRoutes();

@@ -16,10 +16,11 @@ export class TransactionComponent implements OnInit {
   amount: number;
   carnet: number;
 
-  newTransaction(account, amount) : Transaction{
+  newTransaction(account, amount, deposit) : Transaction{
     return{
-      no_cuenta: account,
-      retiro: amount
+        no_cuenta: account,
+        retiro: amount,
+        deposito: deposit
     }
   }
 
@@ -32,7 +33,7 @@ export class TransactionComponent implements OnInit {
 
   Deposit(){
     if(this.carnet && this.amount && this.carnet){
-      this.transaccionService.Deposit(this.newTransaction(this.account, this.amount), this.carnet).subscribe(
+      this.transaccionService.Deposit(this.newTransaction(this.account, 0, this.amount), this.carnet).subscribe(
           res =>{
             if(res===true){
               this.presentAlert('Felicidades','Deposito efectuado con éxito')
@@ -48,7 +49,7 @@ export class TransactionComponent implements OnInit {
 
   Withdraw(){
     if(this.carnet && this.amount && this.carnet){
-      this.transaccionService.Withdraw(this.newTransaction(this.account, this.amount), this.carnet).subscribe(
+      this.transaccionService.Withdraw(this.newTransaction(this.account, this.amount, 0), this.carnet).subscribe(
           res =>{
             if(res===true){
               this.presentAlert('Felicidades','Retiro efectuado con éxito')

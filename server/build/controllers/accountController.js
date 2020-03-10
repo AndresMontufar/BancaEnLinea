@@ -29,5 +29,32 @@ class accountController {
             }
         });
     }
+    deposit_account(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const cuenta = req.body.no_cuenta;
+            const deposito = req.body.deposito;
+            const response = yield database_1.default.query('UPDATE banca.cuenta SET saldo = saldo + ?'
+                + ' where usuario_carnet = ? and no_cuenta = ? and estado = 1', [deposito, carnet, cuenta]);
+            if (response.changedRows > 0) {
+                res.send(true);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
+    get_account(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('SELECT * from banca.cuenta where usuario_carnet = ? ', [carnet]);
+            if (response.length > 0) {
+                res.send(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.AccountController = new accountController();
