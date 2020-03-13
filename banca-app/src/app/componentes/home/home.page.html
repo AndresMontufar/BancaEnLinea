@@ -10,14 +10,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card *ngFor="let account of Account">
     <ion-card-header style="background-color: rgba(5,79,158,0.44)">
       <ion-card-title>
         <h3><b>Cuenta No. 15615300230</b></h3>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+      <ion-item>
         <ion-icon slot="start" color="medium" name="cash"></ion-icon>
         <ion-label>Q. 0.00</ion-label>
       </ion-item>
