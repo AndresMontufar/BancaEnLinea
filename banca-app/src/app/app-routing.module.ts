@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
+    path: 'listapagos/:carnet',
+    loadChildren: () => import('./componentes/listapagos/listapagos.module').then( m => m.ListapagosPageModule)
+  },
+  {
     path: 'Registro',
     component: RegistroUsuarioComponent
   },
@@ -39,7 +43,12 @@ const routes: Routes = [
   {
     path: 'simularTransaccion',
     component: TransactionComponent
+  },
+  {
+    path: 'listapagos',
+    loadChildren: () => import('./componentes/listapagos/listapagos.module').then(m => m.ListapagosPageModule)
   }
+
 
 
 ];
