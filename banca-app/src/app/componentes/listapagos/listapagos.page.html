@@ -11,14 +11,22 @@
   <ion-card style="background-color: rgba(154,165,140,0.36)">
     <ion-card-header>
       <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
-        <h2 style="color: white"><b>Mi Usuario</b></h2>
+        <h2 style="color: white"><b>Pagos Disponibles</b></h2>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
 
-      <ion-item>
-        <ion-input disabled="true" type="number" name="CarnetTxt" placeholder="carné"></ion-input>
-      </ion-item>
+      <ion-list>
+
+          <ion-item *ngFor="let item of items" >
+            <ion-icon slot="start" [name]="item.icon" [ngStyle]="{'color': item.color}"></ion-icon>
+            <ion-label>
+              <h3>{{item.title}}</h3>
+            </ion-label>
+          </ion-item>
+
+      </ion-list>
+
 
     </ion-card-content>
   </ion-card>

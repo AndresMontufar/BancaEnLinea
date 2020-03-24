@@ -30,7 +30,7 @@ export class AppComponent{
     {
       title: 'Pagos',
       url: `/listapagos`,
-      icon: 'person'
+      icon: 'cash'
     },
   ];
 
