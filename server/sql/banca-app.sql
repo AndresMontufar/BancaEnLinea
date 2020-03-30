@@ -58,3 +58,46 @@ INSERT INTO `banca`.`estado_cuenta` (`nombre`) VALUES ('Cancelada');
 
 INSERT INTO `banca`.`tipo_cuenta` (`nombre`) VALUES ('monetaria');
 INSERT INTO `banca`.`tipo_cuenta` (`nombre`) VALUES ('ahorro');
+
+-- TABLAS PARA EL SIGUIENTE SPRINT
+
+create table curso (
+codigo_curso INTEGER PRIMARY KEY,
+nombre_curso VARCHAR(100)
+);
+
+create table tipo_pago (
+id_tipo_pago INTEGER PRIMARY KEY AUTO_INCREMENT,
+nombre_pago VARCHAR(40)
+);
+
+INSERT INTO tipo_pago (nombre_proceso) VALUES ('Retrasada');
+INSERT INTO tipo_pago (nombre_proceso) VALUES ('Inscripcion');
+INSERT INTO tipo_pago (nombre_proceso) VALUES ('Suficiencia');
+
+
+create table historial_pagos (
+no_cuenta INTEGER,
+proceso INTEGER,
+monto FLOAT,
+curso INTEGER NULL,
+descripcion VARCHAR(200),
+fecha DATETIME,
+FOREIGN KEY (proceso) REFERENCES tipo_pago (id_tipo_pago),
+FOREIGN KEY (curso) REFERENCES curso (codigo_curso),
+FOREIGN KEY (no_cuenta) REFERENCES cuenta (no_cuenta)
+);
+
+create table historial_transacciones (
+no_cuenta INTEGER,
+fecha DATETIME,
+monto FLOAT,
+descripcion VARCHAR(200)
+);
+
+create table cuentas_externas (
+cuenta_propietario INTEGER NOT NULL,
+cuenta_externa INTEGER,
+fecha DATETIME,
+FOREIGN KEY (cuenta_propietario) REFERENCES cuenta (no_cuenta)
+);
