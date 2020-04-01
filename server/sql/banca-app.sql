@@ -71,29 +71,56 @@ id_tipo_pago INTEGER PRIMARY KEY AUTO_INCREMENT,
 nombre_pago VARCHAR(40)
 );
 
-INSERT INTO tipo_pago (nombre_proceso) VALUES ('Retrasada');
-INSERT INTO tipo_pago (nombre_proceso) VALUES ('Inscripcion');
-INSERT INTO tipo_pago (nombre_proceso) VALUES ('Suficiencia');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Retrasada');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Inscripcion');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Suficiencia');
 
 
-create table historial_pagos (
-no_cuenta INTEGER,
-proceso INTEGER,
-monto FLOAT,
-curso INTEGER NULL,
-descripcion VARCHAR(200),
-fecha DATETIME,
-FOREIGN KEY (proceso) REFERENCES tipo_pago (id_tipo_pago),
-FOREIGN KEY (curso) REFERENCES curso (codigo_curso),
-FOREIGN KEY (no_cuenta) REFERENCES cuenta (no_cuenta)
-);
+CREATE TABLE `banca`.`historial_pagos` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `no_cuenta` BIGINT(20) NOT NULL,
+  `tipo_id` INT NOT NULL,
+  `monto` FLOAT NOT NULL,
+  `curso` INT NULL,
+  `descripcion` VARCHAR(200) NOT NULL,
+  `fecha` DATETIME NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_curso_historial_idx` (`curso` ASC),
+  INDEX `fk_cuenta_historial_idx` (`no_cuenta` ASC),
+  INDEX `fk_tipo_historial_idx` (`tipo_id` ASC),
+  CONSTRAINT `fk_curso_historial`
+    FOREIGN KEY (`curso`)
+    REFERENCES `banca`.`curso` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cuenta_historial`
+    FOREIGN KEY (`no_cuenta`)
+    REFERENCES `banca`.`cuenta` (`no_cuenta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tipo_historial`
+    FOREIGN KEY (`tipo_id`)
+    REFERENCES `banca`.`tipo_pago` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
 
-create table historial_transacciones (
-no_cuenta INTEGER,
-fecha DATETIME,
-monto FLOAT,
-descripcion VARCHAR(200)
-);
+CREATE TABLE `banca`.`historial_transacciones` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `no_cuenta` BIGINT(20) NULL,
+  `fecha` DATETIME NULL,
+  `monto` FLOAT NULL,
+  `descripcion` VARCHAR(200) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_cuenta_transaccion_idx` (`no_cuenta` ASC),
+  CONSTRAINT `fk_cuenta_transaccion`
+    FOREIGN KEY (`no_cuenta`)
+    REFERENCES `banca`.`cuenta` (`no_cuenta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+ALTER TABLE `banca`.`cuenta` 
+ADD COLUMN `externa` TINYINT(1) NULL AFTER `estado`;
+
 
 create table estado_solicitud (
 id_estado INT PRIMARY KEY AUTO_INCREMENT,
@@ -112,6 +139,3 @@ estado INTEGER,
 FOREIGN KEY (cuenta_propietario) REFERENCES cuenta(no_cuenta),
 FOREIGN KEY (estado) REFERENCES estado_solicitud (id_estado)
 );
-
-
-
