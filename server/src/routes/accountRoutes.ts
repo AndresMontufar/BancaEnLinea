@@ -24,5 +24,6 @@ class accountRoutes {
 
 }
 
+
 const AccountRoutes = new accountRoutes();
 export default AccountRoutes.router;

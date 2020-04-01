@@ -30,10 +30,22 @@ class userController {
             res.json({ text: 'user and account created' });
         });
     }
+    create_curso(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('INSERT INTO banca.curso set ?', [req.body]);
+            res.json({ text: 'curso creado' });
+        });
+    }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const users = yield database_1.default.query('SELECT * FROM  banca.usuario');
             res.json(users);
+        });
+    }
+    list_curso(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const curso = yield database_1.default.query('SELECT * FROM  banca.curso');
+            res.json(curso);
         });
     }
     disabled_account(req, res) {

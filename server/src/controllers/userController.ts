@@ -25,10 +25,24 @@ class userController {
          res.json({text: 'user and account created'});
     }
 
+    public async create_curso (req: Request, res:Response):Promise<void>{
+
+        await pool.query('INSERT INTO banca.curso set ?',[req.body]);
+
+        res.json({text: 'curso creado'});
+    }
+
     public async list(req: Request, res:Response):Promise<void>{
 
         const users= await pool.query('SELECT * FROM  banca.usuario');
         res.json(users);
+
+    }
+
+    public async list_curso(req: Request, res:Response):Promise<void>{
+
+        const curso= await pool.query('SELECT * FROM  banca.curso');
+        res.json(curso);
 
     }
     public async disabled_account(req: Request, res:Response):Promise<void>{

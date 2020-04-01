@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/accountController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/accountController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/userController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/userRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/userRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583455226964</updated>
       <workItem from="1583455238076" duration="33000" />
-      <workItem from="1585781759510" duration="1725000" />
+      <workItem from="1585781759510" duration="3275000" />
     </task>
     <servers />
   </component>

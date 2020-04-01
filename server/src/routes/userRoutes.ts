@@ -20,6 +20,9 @@ class userRoutes {
         this.router.put('/update-account/:carnet',UserController.update_account); // Editar el perfil
         this.router.get('/profile/:carnet',UserController.profile); //Obtener el perfil del usuario con su carnet
 
+        //para curso
+        this.router.post('/create-curso',UserController.create_curso); // Crear curso
+        this.router.get('/create-curso',UserController.list_curso) // lista cursos
     }
 
 }
