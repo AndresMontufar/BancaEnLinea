@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { tokenValidation} from '../libs/validateToken'
 import {AccountController} from "../controllers/accountController";
+import {UserController} from "../controllers/userController";
 
 class accountRoutes {
 
@@ -17,6 +18,8 @@ class accountRoutes {
         this.router.put('/deposit-account/:carnet', AccountController.deposit_account); // deposito de dinero
 
         this.router.get('/get-account/:carnet', AccountController.get_account); // obtener cuenta
+
+        this.router.post('/create-sufis',AccountController.create_sufis); // pagar una suficiencia
     }
 
 }

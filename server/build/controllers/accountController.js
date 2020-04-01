@@ -29,6 +29,16 @@ class accountController {
             }
         });
     }
+    create_sufis(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            const no_cuenta = req.body.no_cuenta;
+            const curso = req.body.curso;
+            const descripcion = req.body.descripcion;
+            yield database_1.default.query('INSERT INTO banca.historial_pagos ("no_cuenta","tipo_id","monto","curso","descripcion") values (?,3,20,?,?)', [no_cuenta, curso, descripcion]);
+            res.json({ text: 'pago de suficiencia agregado' });
+        });
+    }
     deposit_account(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { carnet } = req.params;
