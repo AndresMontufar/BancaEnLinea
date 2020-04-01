@@ -95,9 +95,23 @@ monto FLOAT,
 descripcion VARCHAR(200)
 );
 
-create table cuentas_externas (
-cuenta_propietario INTEGER NOT NULL,
-cuenta_externa INTEGER,
-fecha DATETIME,
-FOREIGN KEY (cuenta_propietario) REFERENCES cuenta (no_cuenta)
+create table estado_solicitud (
+id_estado INT PRIMARY KEY AUTO_INCREMENT,
+nombre_estado VARCHAR(40)
 );
+
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Pendiente');
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Habilitado');
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Deshabilitado');
+
+create table cuentas_externas (
+cuenta_propietario BIGINT,
+cuenta_externa BIGINT,
+fecha DATETIME,
+estado INTEGER,
+FOREIGN KEY (cuenta_propietario) REFERENCES cuenta(no_cuenta),
+FOREIGN KEY (estado) REFERENCES estado_solicitud (id_estado)
+);
+
+
+
