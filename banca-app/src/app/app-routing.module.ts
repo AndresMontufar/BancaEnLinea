@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/listapagos/listapagos.module').then( m => m.ListapagosPageModule)
   },
   {
+    path: 'suficiencia/:carnet',
+    loadChildren: () => import('./componentes/suficiencia/suficiencia.module').then( m => m.SuficienciaPageModule)
+  },
+  {
     path: 'Registro',
     component: RegistroUsuarioComponent
   },
@@ -47,7 +51,12 @@ const routes: Routes = [
   {
     path: 'listapagos',
     loadChildren: () => import('./componentes/listapagos/listapagos.module').then(m => m.ListapagosPageModule)
+  },
+  {
+    path: 'suficiencia',
+    loadChildren: () => import('./componentes/suficiencia/suficiencia.module').then( m => m.SuficienciaPageModule)
   }
+
 
 
 

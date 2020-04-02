@@ -15,6 +15,12 @@ export class ListapagosPage implements OnInit {
       color: '#E63135'
     },
     {
+      title: 'Suficiencia',
+      icon: 'checkbox-outline',
+      description: 'Pago para asignar la suficiencia',
+      color: '#48B627'
+    },
+    {
       title: 'Vacaciones',
       icon: 'paper-plane',
       description: 'Pago Escuela de Vacaciones.',
@@ -32,6 +38,7 @@ export class ListapagosPage implements OnInit {
       description: 'Pagos Varios',
       color: '#FFD439'
     },
+    
   ];
 
   constructor() { }
