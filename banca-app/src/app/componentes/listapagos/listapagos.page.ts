@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GlobalService} from '../../servicios/global.service'
 
 @Component({
   selector: 'app-listapagos',
@@ -12,36 +13,41 @@ export class ListapagosPage implements OnInit {
       title: 'Semestre',
       icon: 'md-checkmark-circle-outline',
       description: 'Pago de cursos Semestral.',
-      color: '#E63135'
+      color: '#E63135',
+      url: '#'
     },
     {
       title: 'Suficiencia',
       icon: 'checkbox-outline',
       description: 'Pago para asignar la suficiencia',
-      color: '#48B627'
+      color: '#48B627',
+      url: '/suficiencia'
     },
     {
       title: 'Vacaciones',
       icon: 'paper-plane',
       description: 'Pago Escuela de Vacaciones.',
-      color: '#0CA9EA'
+      color: '#0CA9EA',
+      url: '#'
     },
     {
       title: 'Retrasadas',
       icon: 'refresh',
       description: 'Pago de Retrasada.',
-      color: '#F46529'
+      color: '#F46529',
+      url: '#'
     },
     {
       title: 'Varios',
       icon: 'alert',
       description: 'Pagos Varios',
-      color: '#FFD439'
+      color: '#FFD439',
+      url: '#'
     },
     
   ];
 
-  constructor() { }
+  constructor(private global: GlobalService) { }
 
   ngOnInit() {
   }
