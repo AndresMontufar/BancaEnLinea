@@ -17,6 +17,7 @@ class accountRoutes {
         this.router.put('/deposit-account/:carnet', AccountController.deposit_account); // deposito de dinero
 
         this.router.get('/get-account/:carnet', AccountController.get_account); // obtener cuenta
+
     }
 
 }
