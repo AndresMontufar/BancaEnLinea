@@ -33,6 +33,7 @@ export class HomePage implements OnInit{
       this.accountService.getAccounts(this.global.carne).subscribe(
           (res : Cuenta[]) =>{
             this.Account = res;
+            console.log(res);
           },
           err =>console.error(err)
       )
