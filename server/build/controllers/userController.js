@@ -75,5 +75,15 @@ class userController {
             }
         });
     }
+    historial_pagos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            //const a = 1;
+            //const b = 3;
+            //const tipo_pago = Math.round(Math.random()*(b-a)+a);
+            yield database_1.default.query('INSERT INTO banca.historial_pagos set ?', [req.body]);
+            res.json({ text: 'Pago Registrado' });
+        });
+    }
 }
 exports.UserController = new userController();

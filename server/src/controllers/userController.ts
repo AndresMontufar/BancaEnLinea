@@ -76,6 +76,18 @@ class userController {
         }
               
     }
+
+    public async historial_pagos(req: Request, res: Response):Promise<void>{
+        console.log(req.body);
+
+        //const a = 1;
+        //const b = 3;
+        //const tipo_pago = Math.round(Math.random()*(b-a)+a);
+
+        await pool.query('INSERT INTO banca.historial_pagos set ?',[req.body]);
+
+        res.json({text: 'Pago Registrado'});
+    }
 }
 
 export const UserController = new userController();
