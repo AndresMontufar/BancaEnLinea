@@ -35,8 +35,15 @@ class accountController {
             const no_cuenta = req.body.no_cuenta;
             const curso = req.body.curso;
             const descripcion = req.body.descripcion;
-            yield database_1.default.query('INSERT INTO banca.historial_pagos ("no_cuenta","tipo_id","monto","curso","descripcion") values (?,3,20,?,?)', [no_cuenta, curso, descripcion]);
+            const fecha = req.body.fecha;
+            yield database_1.default.query('INSERT INTO banca.historial_pagos (no_cuenta,tipo_id,monto,curso,descripcion,fecha) values (?,3,20,?,?,?)', [no_cuenta, curso, descripcion, fecha]);
             res.json({ text: 'pago de suficiencia agregado' });
+        });
+    }
+    list_pagos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const curso = yield database_1.default.query('SELECT * FROM  banca.historial_pagos');
+            res.json(curso);
         });
     }
     deposit_account(req, res) {

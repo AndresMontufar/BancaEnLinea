@@ -32,8 +32,11 @@ class userController {
     }
     create_curso(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO banca.curso set ?', [req.body]);
-            res.json({ text: 'curso creado' });
+            console.log(req.body);
+            const id_curso = req.body.codigo_curso;
+            const curso = req.body.nombre_curso;
+            yield database_1.default.query('INSERT INTO banca.curso values (?,?)', [id_curso, curso]);
+            res.json({ text: 'cursoclear agregado' });
         });
     }
     list(req, res) {

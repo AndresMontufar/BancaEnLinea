@@ -27,9 +27,16 @@ class userController {
 
     public async create_curso (req: Request, res:Response):Promise<void>{
 
-        await pool.query('INSERT INTO banca.curso set ?',[req.body]);
+        console.log(req.body);
 
-        res.json({text: 'curso creado'});
+        const id_curso = req.body.codigo_curso;
+        const curso = req.body.nombre_curso;
+
+
+        await pool.query('INSERT INTO banca.curso values (?,?)',
+            [id_curso,curso]);
+
+        res.json({text: 'cursoclear agregado'});
     }
 
     public async list(req: Request, res:Response):Promise<void>{

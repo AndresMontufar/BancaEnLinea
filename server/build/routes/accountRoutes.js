@@ -12,6 +12,7 @@ class accountRoutes {
         this.router.put('/deposit-account/:carnet', accountController_1.AccountController.deposit_account); // deposito de dinero
         this.router.get('/get-account/:carnet', accountController_1.AccountController.get_account); // obtener cuenta
         this.router.post('/create-sufis', accountController_1.AccountController.create_sufis); // pagar una suficiencia
+        this.router.get('/create-sufis', accountController_1.AccountController.list_pagos); // listado de pagos
     }
 }
 const AccountRoutes = new accountRoutes();

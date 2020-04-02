@@ -20,6 +20,8 @@ class accountRoutes {
         this.router.get('/get-account/:carnet', AccountController.get_account); // obtener cuenta
 
         this.router.post('/create-sufis',AccountController.create_sufis); // pagar una suficiencia
+
+        this.router.get('/create-sufis',AccountController.list_pagos); // listado de pagos
     }
 
 }
