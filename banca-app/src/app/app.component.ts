@@ -27,6 +27,11 @@ export class AppComponent{
       url: `/perfil`,
       icon: 'person'
     },
+    {
+      title: 'Pagos',
+      url: `/listapagos`,
+      icon: 'cash'
+    },
   ];
 
   constructor(

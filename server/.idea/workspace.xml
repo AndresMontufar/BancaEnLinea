@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../banca-app/src/app/Modelos/Cuenta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../banca-app/src/app/servicios/cuenta.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../banca-app/src/app/servicios/cuenta.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../banca-app/src/app/componentes/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../banca-app/src/app/componentes/home/home.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../banca-app/src/app/componentes/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../banca-app/src/app/componentes/home/home.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

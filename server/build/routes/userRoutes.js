@@ -8,7 +8,7 @@ class userRoutes {
         this.config();
     }
     config() {
-        this.router.post('/create-user', userController_1.UserController.create_user); // Crear usuario
+        this.router.post('/create-user', userController_1.UserController.create_user); // Crear usuario y Crear Cuenta
         this.router.get('/create-user', userController_1.UserController.list); // Lista de usuarios creados
         this.router.put('/disabled_account/:carnet', userController_1.UserController.disabled_account); // Deshabilitar cuenta
         this.router.put('/activate_account/:carnet', userController_1.UserController.activate_account); // Habilitar cuenta
@@ -17,6 +17,7 @@ class userRoutes {
         //para curso
         this.router.post('/create-curso', userController_1.UserController.create_curso); // Crear curso
         this.router.get('/create-curso', userController_1.UserController.list_curso); // lista cursos
+        this.router.post('/historial_pagos', userController_1.UserController.historial_pagos); // Crear usuario y Crear Cuenta
     }
 }
 const UserRoutes = new userRoutes();

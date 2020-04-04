@@ -13,12 +13,13 @@ class userRoutes {
 
     config(): void{
 
-        this.router.post('/create-user',UserController.create_user); // Crear usuario
+        this.router.post('/create-user',UserController.create_user); // Crear usuario y Crear Cuenta
         this.router.get('/create-user',UserController.list); // Lista de usuarios creados
         this.router.put('/disabled_account/:carnet',UserController.disabled_account); // Deshabilitar cuenta
         this.router.put('/activate_account/:carnet',UserController.activate_account); // Habilitar cuenta
         this.router.put('/update-account/:carnet',UserController.update_account); // Editar el perfil
         this.router.get('/profile/:carnet',UserController.profile); //Obtener el perfil del usuario con su carnet
+        this.router.post('/historial_pagos',UserController.historial_pagos); // Crear usuario y Crear Cuenta
 
         //para curso
         this.router.post('/create-curso',UserController.create_curso); // Crear curso
