@@ -75,7 +75,6 @@ INSERT INTO tipo_pago (nombre) VALUES ('Retrasada');
 INSERT INTO tipo_pago (nombre) VALUES ('Inscripcion');
 INSERT INTO tipo_pago (nombre) VALUES ('Suficiencia');
 
-
 CREATE TABLE `banca`.`historial_pagos` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `no_cuenta` BIGINT(20) NOT NULL,
@@ -120,4 +119,70 @@ CREATE TABLE `banca`.`historial_transacciones` (
     
 ALTER TABLE `banca`.`cuenta` 
 ADD COLUMN `externa` TINYINT(1) NULL AFTER `estado`;
+
+
+ --  Para tener referencia de cuando se asignaron los cursos
+CREATE TABLE `fecha_asignacion` (
+  `idfecha_asignacion` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(100) NOT NULL,
+  `fecha_inicio` date NOT NULL,
+  `fecha_fin` date NOT NULL,
+  PRIMARY KEY (`idfecha_asignacion`)
+) 
+
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Primer Semestre 2020', '2020-01-20', '2020-05-31');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Escuela de Vacaciones Primer Semestre 2020', '2020-06-01', '2020-06-30');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Segundo Semestre 2020', '2020-07-17', '2020-11-30');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Escuela de Vacaiones Segundo Semestre 2020', '2020-12-1', '2020-12-31');
+
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Primera Retrasada Primer Semestre 2020', '2020-05-15', '2020-05-31');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Segunda Retrasada Primer Semestre 2020', '2020-07-1', '2020-07-16');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Primera Retrasada Segundo Semestre 2020', '2020-11-15', '2020-11-30');
+INSERT INTO `banca`.`fecha_asignacion` (`descripcion`, `fecha_inicio`, `fecha_fin`) VALUES ('Segunda Retrasada Segundo Semestre 2020', '2021-01-01', '2021-01-15');
+
+-- Tabla para el manejo de cursos por semestre y su seccion.
+CREATE TABLE `banca`.`cursos_semestre` (
+  `idcursos_semestre` INT NOT NULL AUTO_INCREMENT,
+  `curso` INT NULL,
+  `semestre` INT NULL,
+  `seccion` VARCHAR(20) NULL,
+  PRIMARY KEY (`idcursos_semestre`),
+  INDEX `curso_idx` (`curso` ASC),
+  INDEX `semestre_idx` (`semestre` ASC),
+  CONSTRAINT `curso`
+    FOREIGN KEY (`curso`)
+    REFERENCES `banca`.`curso` (`codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `semestre`
+    FOREIGN KEY (`semestre`)
+    REFERENCES `banca`.`fecha_asignacion` (`idfecha_asignacion`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+ALTER TABLE `banca`.`cursos_semestre` 
+DROP COLUMN `hora_fin`,
+CHANGE COLUMN `hora_inicio` `precio` INT NULL DEFAULT NULL ;
+
+-- Tabla que maneja la asignacion, con los cursos registrados en curso semestres
+-- Este iria cambiando conforme los semestres
+CREATE TABLE `banca`.`asignacion` (
+  `idasignacion` INT NOT NULL AUTO_INCREMENT,
+  `usuario` INT NULL,
+  `curso_semestre` INT NULL,
+  `fecha` DATE NULL,
+  PRIMARY KEY (`idasignacion`),
+  INDEX `curso_asignacion_idx` (`curso_semestre` ASC),
+  INDEX `curso_usuario_idx` (`usuario` ASC),
+  CONSTRAINT `curso_asignacion`
+    FOREIGN KEY (`curso_semestre`)
+    REFERENCES `banca`.`cursos_semestre` (`idcursos_semestre`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `curso_usuario`
+    FOREIGN KEY (`usuario`)
+    REFERENCES `banca`.`usuario` (`carnet`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
 

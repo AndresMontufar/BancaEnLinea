@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/listapagos/listapagos.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/listapagos/listapagos.page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
