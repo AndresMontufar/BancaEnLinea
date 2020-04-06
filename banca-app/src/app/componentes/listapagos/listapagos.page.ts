@@ -28,14 +28,14 @@ export class ListapagosPage implements OnInit {
       icon: 'paper-plane',
       description: 'Pago Escuela de Vacaciones.',
       color: '#0CA9EA',
-      url: '#'
+      url: '/vacaciones'
     },
     {
       title: 'Retrasadas',
       icon: 'refresh',
       description: 'Pago de Retrasada.',
       color: '#F46529',
-      url: '#'
+      url: '/retrasada'
     },
     {
       title: 'Varios',

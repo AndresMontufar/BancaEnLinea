@@ -36,6 +36,14 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/suficiencia/suficiencia.module').then( m => m.SuficienciaPageModule)
   },
   {
+    path: 'retrasada/:carnet',
+    loadChildren: () => import('./componentes/retrasada/retrasada.module').then( m => m.RetrasadaPageModule)
+  },
+  {
+    path: 'vacaciones/:carnet',
+    loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then( m => m.VacacionesPageModule)
+  },
+  {
     path: 'Registro',
     component: RegistroUsuarioComponent
   },
@@ -55,7 +63,17 @@ const routes: Routes = [
   {
     path: 'suficiencia',
     loadChildren: () => import('./componentes/suficiencia/suficiencia.module').then( m => m.SuficienciaPageModule)
+  },
+  {
+    path: 'retrasada',
+    loadChildren: () => import('./componentes/retrasada/retrasada.module').then(m => m.RetrasadaPageModule)
+  },
+  {
+    path: 'vacaciones',
+    loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then(m => m.VacacionesPageModule)
   }
+
+
 
 
 

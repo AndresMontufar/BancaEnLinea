@@ -18,11 +18,7 @@
 
       <ion-list>
 
-<<<<<<< HEAD
-          <ion-item *ngFor="let item of items">
-=======
           <ion-item *ngFor="let item of items" [routerDirection]="'root'" [routerLink]="[item.url, global.carne]">
->>>>>>> 107a9e4880d68bb634699f4d5ec0027a1c67d218
             <ion-icon slot="start" [name]="item.icon" [ngStyle]="{'color': item.color}"></ion-icon>
             <ion-label>
               <h3>{{item.title}}</h3>
