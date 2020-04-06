@@ -1,9 +1,11 @@
-    import express, {Application} from 'express';
+import express, {Application} from 'express';
 import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import userRoutes from './routes/userRoutes';
 import accountRoutes from './routes/accountRoutes';
 import externalAccountRoutes from './routes/externalAccountRoutes';
+import assignmentRoutes from './routes/assignmentRoutes';
+
 class Server{
 
     public app: Application;
@@ -25,6 +27,7 @@ class Server{
         this.app.use('/api/user', userRoutes)
         this.app.use('/api/account', accountRoutes)
         this.app.use('/api/external-account', externalAccountRoutes);
+        this.app.use('/api/assignment', assignmentRoutes);
     }
 
     start(): void{
