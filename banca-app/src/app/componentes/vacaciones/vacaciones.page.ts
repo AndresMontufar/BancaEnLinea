@@ -28,6 +28,8 @@ export class VacacionesPage implements OnInit {
     },
   ];
 
+  laboratorio: boolean;
+  laboratorioC: number;
 
   constructor(private retrasericio: RetrasadaService, public alertController: AlertController,
               private global: GlobalService) { }
@@ -45,6 +47,16 @@ export class VacacionesPage implements OnInit {
   vacasasignar(){
     //console.log(this.global.carne);
     this.presentAlert('Vacaciones','Vacaciones asignada')
+  }
+
+  conlaboratorio(){
+    this.laboratorio = !this.laboratorio;
+    if(this.laboratorio == true){
+      this.laboratorioC = 80
+    }else {
+      this.laboratorioC = 0
+    }
+    console.log('sms checked:' + this.laboratorio + ' precio: ' + this.laboratorioC);
   }
 
   async presentAlert(title, message) {
