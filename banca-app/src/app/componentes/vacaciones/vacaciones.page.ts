@@ -43,7 +43,7 @@ export class VacacionesPage implements OnInit {
   }
 
   vacasasignar(){
-    console.log(this.global.carne);
+    //console.log(this.global.carne);
     this.presentAlert('Vacaciones','Vacaciones asignada')
   }
 
