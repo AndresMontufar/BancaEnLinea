@@ -43,7 +43,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,6 +61,9 @@
       <workItem from="1583430840212" duration="2843000" />
       <workItem from="1583816349971" duration="1002000" />
       <workItem from="1583817853235" duration="1891000" />
+      <workItem from="1585838573252" duration="598000" />
+      <workItem from="1586226998802" duration="2937000" />
+      <workItem from="1586319367068" duration="2787000" />
     </task>
     <servers />
   </component>
