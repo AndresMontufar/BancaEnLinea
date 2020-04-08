@@ -31,6 +31,23 @@ class assignmentController{
             res.send(false);
         }
     }
+
+    public async assignedCourses(req: Request, res:Response):Promise<void>{
+        const {carnet} = req.params;
+        
+        const response = await pool.query('SELECT *from banca.asignacion' 
+        +' where usuario = ? and curso_semestre < 43', [carnet]);
+
+        console.log(response);
+        if(response.length > 0)
+        {
+            res.json(response);
+        }
+        else  
+        {  
+            res.send(false);
+        }
+    }
 }
 
 export const AssignmentController = new assignmentController();

@@ -9,6 +9,7 @@ class assignmentRoutes {
     }
     config() {
         this.router.put('/change-vacation', assignmentController_1.AssignmentController.changeVacation); // cambio curso vacaciones
+        this.router.get('/assigned-courses/:carnet', assignmentController_1.AssignmentController.assignedCourses); // cursos asignados
     }
 }
 const AssignmentRoutes = new assignmentRoutes();

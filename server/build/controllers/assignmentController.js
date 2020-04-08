@@ -36,5 +36,19 @@ class assignmentController {
             }
         });
     }
+    assignedCourses(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('SELECT *from banca.asignacion'
+                + ' where usuario = ? and curso_semestre < 43', [carnet]);
+            console.log(response);
+            if (response.length > 0) {
+                res.json(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.AssignmentController = new assignmentController();

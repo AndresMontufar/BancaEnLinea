@@ -13,6 +13,7 @@ class assignmentRoutes {
     config(): void{
         
         this.router.put('/change-vacation', AssignmentController.changeVacation); // cambio curso vacaciones
+        this.router.get('/assigned-courses/:carnet', AssignmentController.assignedCourses); // cursos asignados
 
     }
 
