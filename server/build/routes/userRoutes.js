@@ -14,10 +14,10 @@ class userRoutes {
         this.router.put('/activate_account/:carnet', userController_1.UserController.activate_account); // Habilitar cuenta
         this.router.put('/update-account/:carnet', userController_1.UserController.update_account); // Editar el perfil
         this.router.get('/profile/:carnet', userController_1.UserController.profile); //Obtener el perfil del usuario con su carnet
+        this.router.post('/historial_pagos', userController_1.UserController.historial_pagos); // Crear usuario y Crear Cuenta
         //para curso
         this.router.post('/create-curso', userController_1.UserController.create_curso); // Crear curso
         this.router.get('/create-curso', userController_1.UserController.list_curso); // lista cursos
-        this.router.post('/historial_pagos', userController_1.UserController.historial_pagos); // Crear usuario y Crear Cuenta
     }
 }
 const UserRoutes = new userRoutes();

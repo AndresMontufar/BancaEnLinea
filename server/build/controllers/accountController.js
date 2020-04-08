@@ -40,9 +40,26 @@ class accountController {
             res.json({ text: 'pago de suficiencia agregado' });
         });
     }
+    create_vacas(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            const usuario = req.body.usuario;
+            const curso_semestre = req.body.curso_semestre;
+            const fecha = req.body.fecha;
+            const total = req.body.total;
+            yield database_1.default.query('INSERT INTO banca.asignacion(usuario,curso_semestre,fecha,total) values (?,?,?,?)', [usuario, curso_semestre, fecha, total]);
+            res.json({ text: 'asignacion escuela de vacaciones exitosa' });
+        });
+    }
     list_pagos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const curso = yield database_1.default.query('SELECT * FROM  banca.historial_pagos');
+            res.json(curso);
+        });
+    }
+    list_vacas(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const curso = yield database_1.default.query('SELECT * FROM  banca.asignacion');
             res.json(curso);
         });
     }

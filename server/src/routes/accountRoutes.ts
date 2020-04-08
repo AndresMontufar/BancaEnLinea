@@ -21,7 +21,11 @@ class accountRoutes {
 
         this.router.post('/create-sufis',AccountController.create_sufis); // pagar una suficiencia
 
+        this.router.post('/asignar-vacas',AccountController.create_vacas); // asignar curso de vacas
+
         this.router.get('/create-sufis',AccountController.list_pagos); // listado de pagos
+
+         this.router.get('/listado-vacas',AccountController.list_vacas); // listado de cursos asignados vacasgeneral
     }
 
 }

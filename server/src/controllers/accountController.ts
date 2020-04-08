@@ -36,12 +36,35 @@ class accountController {
         res.json({text: 'pago de suficiencia agregado'});
     }
 
+    public async create_vacas (req: Request, res:Response):Promise<void>{
+        console.log(req.body);
+
+        const usuario = req.body.usuario;
+        const curso_semestre = req.body.curso_semestre;
+        const fecha = req.body.fecha;
+        const total=req.body.total;
+
+        await pool.query('INSERT INTO banca.asignacion(usuario,curso_semestre,fecha,total) values (?,?,?,?)',
+            [usuario,curso_semestre,fecha,total]);
+
+        res.json({text: 'asignacion escuela de vacaciones exitosa'});
+    }
     public async list_pagos(req: Request, res:Response):Promise<void>{
 
         const curso= await pool.query('SELECT * FROM  banca.historial_pagos');
         res.json(curso);
 
     }
+
+    public async list_vacas(req: Request, res:Response):Promise<void>{
+
+        const curso= await pool.query('SELECT * FROM  banca.asignacion');
+        res.json(curso);
+
+    }
+
+
+
     public async deposit_account(req: Request, res: Response):Promise<void> {   // deposito de dinero
         const { carnet } = req.params;
         const cuenta = req.body.no_cuenta;
