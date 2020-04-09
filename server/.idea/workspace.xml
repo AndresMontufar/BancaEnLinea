@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/accountController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/accountController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/assignmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/assignmentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/assignmentRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/assignmentRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +61,7 @@
       <workItem from="1583816349971" duration="1002000" />
       <workItem from="1583817853235" duration="1891000" />
       <workItem from="1586398996524" duration="2152000" />
+      <workItem from="1586403240030" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="Revision">
       <created>1586400967854</created>
