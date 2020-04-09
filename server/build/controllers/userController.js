@@ -91,7 +91,7 @@ class userController {
             const monto = req.body.monto;
             const curso = req.body.curso;
             const descripcion = req.body.descripcion;
-            const fecha = Date().;
+            const fecha = new Date();
             yield database_1.default.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, curso = ?, descripcion = ?, fecha = ?', [numeroCuenta, 4, monto, curso, descripcion, fecha]);
             res.json({ text: 'Reembolso Registrado' });
         });

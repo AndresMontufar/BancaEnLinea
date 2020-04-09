@@ -95,7 +95,7 @@ class userController {
         const monto = req.body.monto;
         const curso = req.body.curso;
         const descripcion = req.body.descripcion;
-        const fecha = Date().;
+        const fecha = new Date();
 
 
         await pool.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, curso = ?, descripcion = ?, fecha = ?',
