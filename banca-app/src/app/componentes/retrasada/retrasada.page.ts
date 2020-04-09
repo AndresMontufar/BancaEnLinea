@@ -16,7 +16,7 @@ export class RetrasadaPage implements OnInit {
 
   ngOnInit() {
 
-    this.retrasericio.getCursos().subscribe(
+    this.retrasericio.getcursosretra(this.global.carne).subscribe(
         res =>{
           this.cursos = res;
         },

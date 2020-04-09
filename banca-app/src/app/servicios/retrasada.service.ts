@@ -14,4 +14,8 @@ export class RetrasadaService {
   public getCursos() {
     return this.http.get(`${this.API}api/user/create-curso`)
   }
+
+  public getcursosretra(carnet: number){
+    return this.http.get(`${this.API}api/assignment/assigned-courses/${carnet}`)
+  }
 }
