@@ -53,5 +53,11 @@ class assignmentController {
             }
         });
     }
+    all_courses_vacation(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const curso = yield database_1.default.query('SELECT CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion,F.descripcion FROM fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre INNER JOIN curso C ON C.codigo = CS.curso WHERE  F.idfecha_asignacion=2');
+            res.json(curso);
+        });
+    }
 }
 exports.AssignmentController = new assignmentController();
