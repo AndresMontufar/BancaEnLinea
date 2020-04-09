@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/accountController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/accountController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/accountRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +59,24 @@
       <workItem from="1583430840212" duration="2843000" />
       <workItem from="1583816349971" duration="1002000" />
       <workItem from="1583817853235" duration="1891000" />
-      <workItem from="1586398996524" duration="877000" />
+      <workItem from="1586398996524" duration="2152000" />
     </task>
+    <task id="LOCAL-00001" summary="Revision">
+      <created>1586400967854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586400967854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revision" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583165789003">
