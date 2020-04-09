@@ -18,6 +18,7 @@
 
       <ion-card-subtitle><h3 style="color: white"><b>Curso disponible:</b></h3></ion-card-subtitle>
       <ion-item>
+
         <ion-select  placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
           <ion-select-option *ngFor="let item of cursos" [value]="item.codigo">
             {{item.codigo + " - " +item.nombre}}
