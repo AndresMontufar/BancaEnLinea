@@ -57,9 +57,13 @@ class accountController {
     }
 
     public async list_vacas(req: Request, res:Response):Promise<void>{
-
-        const curso= await pool.query('SELECT * FROM  banca.asignacion');
-        res.json(curso);
+        const carnet=req.body.usuario;
+        const curso= await pool.query('SELECT A.usuario, CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion, F.idfecha_asignacion, F.descripcion, F.fecha_inicio, F.fecha_fin FROM \n' +
+            'fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre\n' +
+            'INNER JOIN curso C ON C.codigo = CS.curso\n' +
+            'INNER JOIN asignacion A ON A.curso_semestre = CS.idcursos_semestre where A.usuario=? and (F.idfecha_asignacion=2 or F.idfecha_asignacion=4)',
+            [carnet]);
+            res.json(curso);
 
     }
 

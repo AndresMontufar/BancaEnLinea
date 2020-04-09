@@ -4,10 +4,7 @@
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/accountController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/accountController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
       <workItem from="1585785790303" duration="1756000" />
       <workItem from="1585822964919" duration="3416000" />
       <workItem from="1585828176934" duration="5244000" />
-      <workItem from="1586383759308" duration="4205000" />
+      <workItem from="1586383759308" duration="8288000" />
     </task>
     <servers />
   </component>

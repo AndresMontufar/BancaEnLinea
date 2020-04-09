@@ -59,7 +59,11 @@ class accountController {
     }
     list_vacas(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const curso = yield database_1.default.query('SELECT * FROM  banca.asignacion');
+            const carnet = req.body.usuario;
+            const curso = yield database_1.default.query('SELECT A.usuario, CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion, F.idfecha_asignacion, F.descripcion, F.fecha_inicio, F.fecha_fin FROM \n' +
+                'fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre\n' +
+                'INNER JOIN curso C ON C.codigo = CS.curso\n' +
+                'INNER JOIN asignacion A ON A.curso_semestre = CS.idcursos_semestre where A.usuario=? and (F.idfecha_asignacion=2 or F.idfecha_asignacion=4)', [carnet]);
             res.json(curso);
         });
     }
