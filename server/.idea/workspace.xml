@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/accountController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/accountRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,6 +60,7 @@
       <workItem from="1583430840212" duration="2843000" />
       <workItem from="1583816349971" duration="1002000" />
       <workItem from="1583817853235" duration="1891000" />
+      <workItem from="1586398996524" duration="877000" />
     </task>
     <servers />
   </component>

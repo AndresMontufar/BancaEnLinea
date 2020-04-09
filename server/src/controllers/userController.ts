@@ -52,6 +52,7 @@ class userController {
         res.json(curso);
 
     }
+
     public async disabled_account(req: Request, res:Response):Promise<void>{
         const { carnet } = req.params;
         await  pool.query('UPDATE banca.usuario SET habilitado=0 WHERE carnet=?',[carnet]);
@@ -59,6 +60,7 @@ class userController {
 
 
     }
+
     public async activate_account(req: Request, res:Response):Promise<void>{
         const { carnet } = req.params;
         await  pool.query('UPDATE banca.usuario SET habilitado=1 WHERE carnet=?',[carnet]);

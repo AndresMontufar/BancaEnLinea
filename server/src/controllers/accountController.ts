@@ -49,6 +49,7 @@ class accountController {
 
         res.json({text: 'asignacion escuela de vacaciones exitosa'});
     }
+
     public async list_pagos(req: Request, res:Response):Promise<void>{
 
         const curso= await pool.query('SELECT * FROM  banca.historial_pagos');
