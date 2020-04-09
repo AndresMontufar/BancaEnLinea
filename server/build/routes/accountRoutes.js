@@ -14,7 +14,7 @@ class accountRoutes {
         this.router.post('/create-sufis', accountController_1.AccountController.create_sufis); // pagar una suficiencia
         this.router.post('/asignar-vacas', accountController_1.AccountController.create_vacas); // asignar curso de vacas
         this.router.get('/create-sufis', accountController_1.AccountController.list_pagos); // listado de pagos
-        this.router.get('/listado-vacas', accountController_1.AccountController.list_vacas); // listado de cursos asignados vacasgeneral
+        this.router.get('/listado-vacas/:carnet', accountController_1.AccountController.list_vacas); // listado de cursos asignados vacasgeneral
     }
 }
 const AccountRoutes = new accountRoutes();
