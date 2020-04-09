@@ -88,6 +88,21 @@ class userController {
 
         res.json({text: 'Pago Registrado'});
     }
+
+    public async reembolsos(req: Request, res: Response):Promise<void>{
+
+        const numeroCuenta = req.body.no_cuenta;
+        const monto = req.body.monto;
+        const curso = req.body.curso;
+        const descripcion = req.body.descripcion;
+        const fecha = new Date();
+
+
+        await pool.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, curso = ?, descripcion = ?, fecha = ?',
+            [numeroCuenta, 4, monto, curso, descripcion, fecha]);
+
+        res.json({text: 'Reembolso Registrado'});
+    }
 }
 
 export const UserController = new userController();
