@@ -25,12 +25,34 @@ class userController {
          res.json({text: 'user and account created'});
     }
 
+    public async create_curso (req: Request, res:Response):Promise<void>{
+
+        console.log(req.body);
+
+        const id_curso = req.body.codigo_curso;
+        const curso = req.body.nombre_curso;
+
+
+        await pool.query('INSERT INTO banca.curso values (?,?)',
+            [id_curso,curso]);
+
+        res.json({text: 'cursoclear agregado'});
+    }
+
     public async list(req: Request, res:Response):Promise<void>{
 
         const users= await pool.query('SELECT * FROM  banca.usuario');
         res.json(users);
 
     }
+
+    public async list_curso(req: Request, res:Response):Promise<void>{
+
+        const curso= await pool.query('SELECT * FROM  banca.curso');
+        res.json(curso);
+
+    }
+
     public async disabled_account(req: Request, res:Response):Promise<void>{
         const { carnet } = req.params;
         await  pool.query('UPDATE banca.usuario SET habilitado=0 WHERE carnet=?',[carnet]);
@@ -38,6 +60,7 @@ class userController {
 
 
     }
+
     public async activate_account(req: Request, res:Response):Promise<void>{
         const { carnet } = req.params;
         await  pool.query('UPDATE banca.usuario SET habilitado=1 WHERE carnet=?',[carnet]);

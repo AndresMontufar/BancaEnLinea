@@ -23,6 +23,49 @@ class accountController {
         }
     }
 
+    public async create_sufis (req: Request, res:Response):Promise<void>{
+        console.log(req.body);
+
+        const no_cuenta = req.body.no_cuenta;
+        const curso = req.body.curso;
+        const descripcion = req.body.descripcion;
+        const fecha = req.body.fecha;
+        await pool.query('INSERT INTO banca.historial_pagos (no_cuenta,tipo_id,monto,curso,descripcion,fecha) values (?,3,20,?,?,?)',
+            [no_cuenta,curso,descripcion,fecha]);
+
+        res.json({text: 'pago de suficiencia agregado'});
+    }
+
+    public async create_vacas (req: Request, res:Response):Promise<void>{
+        console.log(req.body);
+
+        const usuario = req.body.usuario;
+        const curso_semestre = req.body.curso_semestre;
+        const fecha = req.body.fecha;
+        const total=req.body.total;
+
+        await pool.query('INSERT INTO banca.asignacion(usuario,curso_semestre,fecha,total) values (?,?,?,?)',
+            [usuario,curso_semestre,fecha,total]);
+
+        res.json({text: 'asignacion escuela de vacaciones exitosa'});
+    }
+
+    public async list_pagos(req: Request, res:Response):Promise<void>{
+
+        const curso= await pool.query('SELECT * FROM  banca.historial_pagos');
+        res.json(curso);
+
+    }
+
+    public async list_vacas(req: Request, res:Response):Promise<void>{
+        const { carnet } = req.params;
+        const curso= await pool.query('SELECT A.usuario, CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion, F.idfecha_asignacion, F.descripcion, F.fecha_inicio, F.fecha_fin ' +
+            'FROM fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre ' +
+            'INNER JOIN curso C ON C.codigo = CS.curso INNER JOIN asignacion A ON A.curso_semestre = CS.idcursos_semestre ' +
+            'WHERE A.usuario = ? AND F.idfecha_asignacion=2 ',[carnet])
+            res.json(curso);
+    }
+
     public async deposit_account(req: Request, res: Response):Promise<void> {   // deposito de dinero
         const { carnet } = req.params;
         const cuenta = req.body.no_cuenta;

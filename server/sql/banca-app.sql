@@ -71,9 +71,9 @@ id_tipo_pago INTEGER PRIMARY KEY AUTO_INCREMENT,
 nombre_pago VARCHAR(40)
 );
 
-INSERT INTO tipo_pago (nombre) VALUES ('Retrasada');
-INSERT INTO tipo_pago (nombre) VALUES ('Inscripcion');
-INSERT INTO tipo_pago (nombre) VALUES ('Suficiencia');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Retrasada');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Inscripcion');
+INSERT INTO tipo_pago (nombre_pago) VALUES ('Suficiencia');
 
 CREATE TABLE `banca`.`historial_pagos` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
@@ -121,6 +121,23 @@ ALTER TABLE `banca`.`cuenta`
 ADD COLUMN `externa` TINYINT(1) NULL AFTER `estado`;
 
 
+create table estado_solicitud (
+id_estado INT PRIMARY KEY AUTO_INCREMENT,
+nombre_estado VARCHAR(40)
+);
+
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Pendiente');
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Habilitado');
+INSERT INTO estado_solicitud (nombre_estado) VALUES ('Deshabilitado');
+
+create table cuentas_externas (
+cuenta_propietario BIGINT,
+cuenta_externa BIGINT,
+fecha DATETIME,
+estado INTEGER,
+FOREIGN KEY (cuenta_propietario) REFERENCES cuenta(no_cuenta),
+FOREIGN KEY (estado) REFERENCES estado_solicitud (id_estado)
+);
  --  Para tener referencia de cuando se asignaron los cursos
 CREATE TABLE `fecha_asignacion` (
   `idfecha_asignacion` int(11) NOT NULL AUTO_INCREMENT,
