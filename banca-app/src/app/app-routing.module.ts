@@ -71,7 +71,26 @@ const routes: Routes = [
   {
     path: 'vacaciones',
     loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then(m => m.VacacionesPageModule)
+  },
+  {
+    path: 'cambio-curso-vacaciones/:carnet',
+    loadChildren: () => import('./componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.module').then(m => m.CambioCursoVacacionesPageModule)
+  },
+  {
+    path: 'cambio-curso-vacaciones/:carnet',
+    loadChildren: () => import('./componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.module').then( m => m.CambioCursoVacacionesPageModule)
+  },
+  {
+    path: 'menuvacaciones/:carnet',
+    loadChildren: () => import('./componentes/menu-vacaciones/menu-vacaciones.module').then( m => m.MenuVacacionesPageModule)
+  },
+  {
+    path: 'menu-vacaciones',
+    loadChildren: () => import('./componentes/menu-vacaciones/menu-vacaciones.module').then( m => m.MenuVacacionesPageModule)
   }
+
+
+
 
 
 
