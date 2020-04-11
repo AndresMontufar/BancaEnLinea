@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background-image">
+  <ion-card style="background-color: rgba(154,165,140,0.36)">
+    <ion-card-header>
+      <ion-card-title style="display: flex; justify-content: center; background-color: rgba(69,121,193,0.62)">
+        <h2 style="color: white"><b>Cambiar de Curso</b></h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-card-subtitle><h3 style="color: white"><b>Cursos Asignados:</b></h3></ion-card-subtitle>
+      <ion-row style="color: white; border: 1px solid black; border-collapse: collapse; border-color: white; background-color: rgba(211, 239, 248, 0.42);">
+        <ion-col style="background-color: white" *ngFor="let curso of cursos;">
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                <span>Codigo: {{ curso.curso }} <br> {{curso.nombre}}</span>
+                <span><br>Seccion: {{curso.seccion }} </span>
+                <span *ngIf="curso.total > 115">  Laboratorio: Si </span>
+                <span *ngIf="curso.total == 115">  Laboratorio: No </span>
+              </ion-card-title>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <span style="color:white; align-content: flex-end" >
+        Curso asignado <br>
+        <ion-select [(ngModel)]="Cambio.curso " placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+          <ion-select-option  *ngFor="let item of cursos" [value]="item.idcursos_semestre">
+            {{item.curso + " - " +item.nombre}}
+          </ion-select-option>
+        </ion-select>
+        </span>
+
+      <br>
+      <span style="color:white; align-content: flex-end" >
+        Cursos disponibles <br>
+        <ion-select  [(ngModel)]="Cambio.cambio" placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+          <ion-select-option *ngFor="let item of todos" [value]="item.idcursos_semestre">
+
+            {{item.curso + " - " +item.nombre + " - " + item.seccion}}
+          </ion-select-option>
+        </ion-select>
+        </span>
+      <ion-card-subtitle><h3 style="color: white"><b>Laboratorio:
+        <ion-checkbox checked="false" color="danger" (ionChange)="conlaboratorio()"></ion-checkbox>
+      </b></h3></ion-card-subtitle>
+
+      <br>
+      <ion-button expand="block" (click)="hacerCambio()" color="success">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        Realizar cambio
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
