@@ -15,14 +15,12 @@ export class RetrasadaPage implements OnInit {
               private global: GlobalService) { }
 
   ngOnInit() {
-
     this.retrasericio.getcursosretra(this.global.carne).subscribe(
         res =>{
           this.cursos = res;
         },
         err => console.error(err)
     )
-
   }
 
   async presentAlert(title, message) {
