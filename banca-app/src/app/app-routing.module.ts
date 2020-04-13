@@ -71,11 +71,6 @@ const routes: Routes = [
   {
     path: 'vacaciones',
     loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then(m => m.VacacionesPageModule)
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
   },
   {
     path: 'cambio-curso-vacaciones/:carnet',
@@ -92,34 +87,11 @@ const routes: Routes = [
   {
     path: 'menu-vacaciones',
     loadChildren: () => import('./componentes/menu-vacaciones/menu-vacaciones.module').then( m => m.MenuVacacionesPageModule)
-<<<<<<< Updated upstream
-=======
   },
   {
     path: 'reembolso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/reembolso-vacaciones/reembolso-vacaciones.module').then( m => m.ReembolsoVacacionesPageModule)
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   }
-
-
-
-
-
-
-<<<<<<< Updated upstream
-
-
-
-=======
-<<<<<<< Updated upstream
-=======
-
-
-
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 ];
 
 @NgModule({

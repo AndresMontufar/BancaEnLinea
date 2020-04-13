@@ -29,13 +29,8 @@ export class MenuVacacionesPage implements OnInit {
       icon: 'paper-plane',
       description: 'Quitar un curso de mis asignaciones',
       color: '#0CA9EA',
-<<<<<<< Updated upstream
-      url: '#'
-=======
       url: '/reembolso-vacaciones'
->>>>>>> Stashed changes
     },
-
   ];
 
   constructor(private global: GlobalService) { }
