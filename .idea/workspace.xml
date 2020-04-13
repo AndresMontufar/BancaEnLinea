@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Reembolso.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" afterDir="false" />
@@ -15,6 +26,15 @@
       <change beforePath="$PROJECT_DIR$/server/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/accountController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/userController.ts" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +89,11 @@
       <workItem from="1586383759308" duration="8288000" />
       <workItem from="1586544756360" duration="14334000" />
       <workItem from="1586628175831" duration="5070000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1586664626280" duration="2327000" />
+      <workItem from="1586743847587" duration="6547000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

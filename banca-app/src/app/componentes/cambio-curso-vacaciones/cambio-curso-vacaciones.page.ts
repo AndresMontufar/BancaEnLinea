@@ -94,11 +94,14 @@ export class CambioCursoVacacionesPage implements OnInit {
         console.log('sms checked:' + this.laboratorio + ' precio: ' + this.laboratorioC);
     }
 
+<<<<<<< Updated upstream
     ValorLaboratorio(valor){
       this.total_actual = valor;
       console.log(this.total_actual)
 
     }
+=======
+>>>>>>> Stashed changes
 
     async presentAlert(title, message) {
         const alert = await this.alertController.create({
