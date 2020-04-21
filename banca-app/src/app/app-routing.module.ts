@@ -73,6 +73,10 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then(m => m.VacacionesPageModule)
   },
   {
+    path: 'semestre',
+    loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
+  },
+  {
     path: 'cambio-curso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.module').then(m => m.CambioCursoVacacionesPageModule)
   },
@@ -91,7 +95,21 @@ const routes: Routes = [
   {
     path: 'reembolso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/reembolso-vacaciones/reembolso-vacaciones.module').then( m => m.ReembolsoVacacionesPageModule)
+  },
+  {
+    path: 'semestre/:carnet',
+    loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
+  },
+  {
+    path: 'listasemestre',
+    loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
+  },
+  {
+    path: 'listasemestre/:carnet',
+    loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
   }
+
+
 ];
 
 @NgModule({
