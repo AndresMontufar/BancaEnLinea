@@ -99,6 +99,23 @@ class accountController {
             res.send(false);
         }
     }
+
+    public async account_status(req: Request, res: Response):Promise<void>{
+        const {cuenta} = req.params;
+
+        const response = await pool.query('SELECT c.no_cuenta, c.saldo, e.id as idEstado, e.nombre as estado' 
+        +' from banca.cuenta c, banca.estado_cuenta e'
+        +' where c.no_cuenta = ? and c.estado = e.id', [cuenta]);
+
+        if(response.length > 0)
+        {
+            res.send(response);
+        }
+        else
+        {
+            res.send(false);
+        }
+    }
 }
 
 export const AccountController = new accountController();

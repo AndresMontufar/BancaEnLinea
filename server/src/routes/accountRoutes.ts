@@ -25,7 +25,9 @@ class accountRoutes {
 
         this.router.get('/create-sufis',AccountController.list_pagos); // listado de pagos
 
-         this.router.get('/listado-vacas/:carnet',AccountController.list_vacas); // listado de cursos asignados vacasgeneral
+        this.router.get('/listado-vacas/:carnet',AccountController.list_vacas); // listado de cursos asignados vacasgeneral
+
+        this.router.get('/status-account/:cuenta', AccountController.account_status); // estado de cuenta
     }
 
 }

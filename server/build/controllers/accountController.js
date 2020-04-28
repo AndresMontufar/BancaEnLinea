@@ -94,5 +94,19 @@ class accountController {
             }
         });
     }
+    account_status(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { cuenta } = req.params;
+            const response = yield database_1.default.query('SELECT c.no_cuenta, c.saldo, e.id as idEstado, e.nombre as estado'
+                + ' from banca.cuenta c, banca.estado_cuenta e'
+                + ' where c.no_cuenta = ? and c.estado = e.id', [cuenta]);
+            if (response.length > 0) {
+                res.send(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.AccountController = new accountController();
