@@ -23,6 +23,9 @@ class userRoutes {
         this.router.post('/historial_pagos',UserController.historial_pagos); // Crear usuario y Crear Cuenta
         this.router.post('/reembolsos',UserController.reembolsos); // Crear usuario y Crear Cuenta
         this.router.get('/historial_cuenta/:carnet',UserController.historial_cuenta ); // Obtiene el historial de cuenta segun el carné
+        //para curso
+        this.router.post('/create-curso',UserController.create_curso); // Crear curso
+        this.router.get('/create-curso',UserController.list_curso) // lista cursos
     }
 
 }

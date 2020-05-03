@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Reembolso.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/perfil/perfil.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/perfil/perfil.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/vacaciones/vacaciones.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/vacaciones/vacaciones.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/accountController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/assignmentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/assignmentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/accountController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/userController.ts" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,6 +68,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\carlo\Documents\GitHub\BancaEnLinea\banca-app\src\app\servicios" />
+      <recent name="C:\Users\carlo\Documents\GitHub\BancaEnLinea\banca-app\src\app\componentes" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -48,8 +82,18 @@
       <option name="presentableId" value="Default" />
       <updated>1583455226964</updated>
       <workItem from="1583455238076" duration="33000" />
+      <workItem from="1585781759510" duration="3328000" />
+      <workItem from="1585785790303" duration="1756000" />
       <workItem from="1585822964919" duration="3416000" />
       <workItem from="1585828176934" duration="5244000" />
+      <workItem from="1586383759308" duration="8288000" />
+      <workItem from="1586544756360" duration="14334000" />
+      <workItem from="1586628175831" duration="5070000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1586664626280" duration="2327000" />
+      <workItem from="1586743847587" duration="6547000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -57,30 +101,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1583455268888">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586546471235">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586546471235" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1586383939827">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586383939827" />
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1586385491153">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586385491153" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455268888" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1583455268887">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1586385491153">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586385491153" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455268887" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1583455268887">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1586385491153">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586385491153" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455268887" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1583455268888">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1586385491153">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586385491153" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455268888" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1585823246472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585823246472" />
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1585828410762">
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1586383796674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585828410762" />
+    <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586383796674" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583455234336" />
   </component>
 </project>

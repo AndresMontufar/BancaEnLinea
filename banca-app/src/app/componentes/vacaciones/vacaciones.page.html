@@ -18,14 +18,25 @@
 
       <ion-card-subtitle><h3 style="color: white"><b>Curso disponible:</b></h3></ion-card-subtitle>
       <ion-item>
-        <ion-select  placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
-          <ion-select-option *ngFor="let item of cursos" [value]="item.codigo">
-            {{item.codigo + " - " +item.nombre}}
+        <ion-select [(ngModel)]="curso_semestre" placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+          <ion-select-option *ngFor="let item of cursos" [value]="item.idcursos_semestre">
+            {{item.curso + " - " +item.nombre}}
           </ion-select-option>
         </ion-select>
       </ion-item>
 
-      <ion-card-subtitle><h3 style="color: white"><b>Laboratorio:
+
+      <ion-card-subtitle><h3 style="color: white"><b>No. Cuenta:</b></h3></ion-card-subtitle>
+      <ion-item>
+        <ion-select placeholder="Seleccionar cuenta" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+          <ion-select-option *ngFor="let item of cuentas" [value]="item.no_cuenta">
+            {{item.no_cuenta}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <br>
+      <ion-card-subtitle><h3 style="color: white"><b>Con laboratorio:
       <ion-checkbox checked="false" color="danger" (ionChange)="conlaboratorio()"></ion-checkbox>
       </b></h3></ion-card-subtitle>
 
@@ -42,10 +53,10 @@
 
       <ion-list>
 
-        <ion-item *ngFor="let itemes of items">
-          <ion-icon slot="start" [name]="itemes.icon" [ngStyle]="{'color': itemes.color}"></ion-icon>
+        <ion-item *ngFor="let itemes of itemss">
+          <!--<ion-icon slot="start" [name]="itemes.icon" [ngStyle]="{'color': itemes.color}"></ion-icon>-->
           <ion-label>
-            <h3>{{itemes.title}}</h3>
+            <h3>{{itemes.curso}}  -  {{itemes.nombre}}  -  {{itemes.seccion}}</h3>
           </ion-label>
         </ion-item>
 

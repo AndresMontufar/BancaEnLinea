@@ -32,6 +32,11 @@ export class AppComponent{
       url: `/listapagos`,
       icon: 'cash'
     },
+    {
+      title: 'Vacaciones',
+      url: `/menuvacaciones`,
+      icon: 'book'
+    },
   ];
 
   constructor(
