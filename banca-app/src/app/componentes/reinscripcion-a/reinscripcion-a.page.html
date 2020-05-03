@@ -16,13 +16,13 @@
     </ion-card-header>
     <ion-card-content>
 
-      <ion-select [(ngModel)]="suficiencia.no_cuenta" placeholder="Seleccionar cuenta" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+      <ion-select [(ngModel)]="reinscripciones.no_cuenta" placeholder="Seleccionar cuenta" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
         <ion-select-option *ngFor="let item of cuentas" [value]="item.no_cuenta">
           {{item.no_cuenta}}
         </ion-select-option>
       </ion-select>
 
-      <ion-button expand="block"  color="success">
+      <ion-button expand="block" (click)="pagar()" color="success">
         <ion-icon name="checkmark-circle"></ion-icon>
         Reinscribir
       </ion-button>
