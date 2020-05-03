@@ -2,9 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3e1097-9370-43c7-b103-6537038a5bc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Reembolso.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/reembolso-vacaciones/reembolso-vacaciones.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banca-app/src/app/servicios/reembolso-vacaciones.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/Modelos/Suficiencia.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/perfil/perfil.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/perfil/perfil.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/vacaciones/vacaciones.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/vacaciones/vacaciones.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build/controllers/accountController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/accountController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/assignmentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/assignmentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/accountRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/accountController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/accountController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/assignmentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/accountRoutes.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banca-app/src/app/componentes/menu-vacaciones/menu-vacaciones.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/userController.ts" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +63,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="C:\Users\50242\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\193.6015.39\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\carlo\Documents\GitHub\BancaEnLinea\banca-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\carlo\Documents\GitHub\BancaEnLinea\banca-app\src\app\servicios" />
+      <recent name="C:\Users\carlo\Documents\GitHub\BancaEnLinea\banca-app\src\app\componentes" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -56,6 +87,13 @@
       <workItem from="1585822964919" duration="3416000" />
       <workItem from="1585828176934" duration="5244000" />
       <workItem from="1586383759308" duration="8288000" />
+      <workItem from="1586544756360" duration="14334000" />
+      <workItem from="1586628175831" duration="5070000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1586664626280" duration="2327000" />
+      <workItem from="1586743847587" duration="6547000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -63,6 +101,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586546471235">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586546471235" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1586383939827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

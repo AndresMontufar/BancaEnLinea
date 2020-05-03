@@ -5,8 +5,6 @@ import {Router} from '@angular/router';
 import {crearusuario} from '../../Modelos/CrearUsuario';
 import {AlertController} from '@ionic/angular';
 
-
-
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
