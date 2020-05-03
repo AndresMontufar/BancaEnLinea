@@ -173,7 +173,29 @@ class userController {
         res.json({text: 'Usuario Reinscrito'});
     }
 
+    public async inscripcion_nuevos (req: Request, res:Response):Promise<void>{
+        console.log(req.body);
+
+        const no_cuenta = req.body.no_cuenta;
+        const monto = req.body.monto;
+        const fecha = new Date();
+
+
+        await pool.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, descripcion = ?, fecha = ?',
+            [no_cuenta, 2, monto, 'Inscripcion de ciclo', fecha]);
+
+        await  pool.query('UPDATE banca.usuario u'
+            + ' INNER JOIN cuenta c ON c.usuario_carnet = u.carnet'
+            + ' INNER JOIN historial_pagos h ON h.no_cuenta = c.no_cuenta'
+            + ' SET u.habilitado = 1'
+            + ' WHERE h.no_cuenta = ?',[no_cuenta]);
+
+        res.json({text: 'Usuario inscrito'});
+    }
+
+
 
 }
+
 
 export const UserController = new userController();
