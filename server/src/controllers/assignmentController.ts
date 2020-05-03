@@ -56,6 +56,24 @@ class assignmentController{
         const curso= await pool.query('SELECT CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion,F.descripcion, CS.precio FROM fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre INNER JOIN curso C ON C.codigo = CS.curso WHERE  F.idfecha_asignacion=2')
         res.json(curso);
     }
+
+    public async assignmentSemestre(req: Request, res: Response):Promise<void> {   // asignacion semestre
+
+        const a = 111111;
+        const b = 999999;
+        const idasignacion = Math.round(Math.random()*(b-a)+a);
+        const response = await pool.query('INSERT INTO banca.asignacion set idasignacion = ?, usuario = ?, curso_semestre = ?, fecha = ?',
+        [idasignacion, req.body.usuario, req.body.curso_semestre, req.body.fecha]);
+        console.log(response);
+        if(response.affectedRows > 0)
+        {
+            res.send(true);
+        }
+        else
+        {
+            res.send(false);
+        }
+    }
 }
 
 export const AssignmentController = new assignmentController();
