@@ -140,7 +140,8 @@ class userController {
             + ' where c.usuario_carnet = ?'
             + ' and c.no_cuenta = h.no_cuenta'
             + ' and h.tipo_id = t.id'
-            + ' and h.curso = cc.codigo', [carnet]);
+            + ' and h.curso = cc.codigo'
+            + ' order by h.fecha desc', [carnet]);
 
         if(response.length > 0)
         {
