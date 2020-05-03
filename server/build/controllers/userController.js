@@ -96,5 +96,21 @@ class userController {
             res.json({ text: 'Reembolso Registrado' });
         });
     }
+    historial_cuenta(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('select h.no_cuenta, t.nombre, h.monto, h.curso, h.descripcion, h.fecha'
+                + ' from historial_pagos h, cuenta c, tipo_pago t'
+                + ' where c.usuario_carnet = ?'
+                + ' and c.no_cuenta = h.no_cuenta'
+                + ' and h.tipo_id = t.id', [carnet]);
+            if (response.length > 0) {
+                res.json(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.UserController = new userController();

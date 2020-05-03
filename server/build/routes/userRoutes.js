@@ -16,6 +16,7 @@ class userRoutes {
         this.router.get('/profile/:carnet', userController_1.UserController.profile); //Obtener el perfil del usuario con su carnet
         this.router.post('/historial_pagos', userController_1.UserController.historial_pagos); // Crear usuario y Crear Cuenta
         this.router.post('/reembolsos', userController_1.UserController.reembolsos); // Crear usuario y Crear Cuenta
+        this.router.get('/historial_cuenta/:carnet', userController_1.UserController.historial_cuenta); // Obtiene el historial de cuenta segun el carné
     }
 }
 const UserRoutes = new userRoutes();

@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { indexController } from '../controllers/indexController';
 import { tokenValidation} from '../libs/validateToken'
 import {UserController} from "../controllers/userController";
+import {AssignmentController} from "../controllers/assignmentController";
 
 class userRoutes {
 
@@ -21,7 +22,7 @@ class userRoutes {
         this.router.get('/profile/:carnet',UserController.profile); //Obtener el perfil del usuario con su carnet
         this.router.post('/historial_pagos',UserController.historial_pagos); // Crear usuario y Crear Cuenta
         this.router.post('/reembolsos',UserController.reembolsos); // Crear usuario y Crear Cuenta
-
+        this.router.get('/historial_cuenta/:carnet',UserController.historial_cuenta ); // Obtiene el historial de cuenta segun el carné
     }
 
 }
