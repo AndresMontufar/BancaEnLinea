@@ -14,7 +14,7 @@ export class ListapagosPage implements OnInit {
       icon: 'md-checkmark-circle-outline',
       description: 'Pago de cursos Semestral.',
       color: '#E63135',
-      url: '#'
+      url: '/semestre'
     },
     {
       title: 'Suficiencia',
