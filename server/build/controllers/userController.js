@@ -132,6 +132,7 @@ class userController {
             }
         });
     }
+
     reinscripcion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
@@ -147,5 +148,6 @@ class userController {
             res.json({ text: 'Usuario Reinscrito' });
         });
     }
+
 }
 exports.UserController = new userController();

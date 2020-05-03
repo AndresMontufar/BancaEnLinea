@@ -41,7 +41,9 @@ export class VacacionesPage implements OnInit {
 
 
 
-  ngOnInit() {
+  async ngOnInit() {
+
+    await delay(500);
 
     this.retrasericio.getCursosVacasAsig(this.global.carne).subscribe(
         res => {
@@ -49,12 +51,17 @@ export class VacacionesPage implements OnInit {
         },
         err => console.error(err)
     )
+
+    await delay(500);
+
     this.retrasericio.getCursosVacas().subscribe(
-        res =>{
+        res => {
           this.cursos = res;
         },
         err => console.error(err)
     )
+
+    await delay(500);
 
     this.retrasericio.getCuentas(this.global.carne).subscribe(
         res => {
@@ -63,6 +70,8 @@ export class VacacionesPage implements OnInit {
         err => console.error(err)
     )
 
+    await delay(500);
+
     this.retrasericio.getCursosVacasAsig(this.global.carne).subscribe(
         res => {
           this.itemss = res;
@@ -70,6 +79,7 @@ export class VacacionesPage implements OnInit {
         err => console.error(err)
     )
 
+    await delay(500);
     this.laboratorioC = 115
   }
 
@@ -115,4 +125,7 @@ export class VacacionesPage implements OnInit {
     await alert.present();
   }
 
+}
+function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
 }

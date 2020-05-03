@@ -172,6 +172,7 @@ class userController {
         res.json({text: 'Usuario Reinscrito'});
     }
 
+
 }
 
 export const UserController = new userController();

@@ -59,5 +59,20 @@ class assignmentController {
             res.json(curso);
         });
     }
+    assignmentSemestre(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const a = 111111;
+            const b = 999999;
+            const idasignacion = Math.round(Math.random() * (b - a) + a);
+            const response = yield database_1.default.query('INSERT INTO banca.asignacion set idasignacion = ?, usuario = ?, curso_semestre = ?, fecha = ?', [idasignacion, req.body.usuario, req.body.curso_semestre, req.body.fecha]);
+            console.log(response);
+            if (response.affectedRows > 0) {
+                res.send(true);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
 }
 exports.AssignmentController = new assignmentController();
