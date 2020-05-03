@@ -97,6 +97,14 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/reembolso-vacaciones/reembolso-vacaciones.module').then( m => m.ReembolsoVacacionesPageModule)
   },
   {
+
+    path: 'reinscripcion-a',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
+  },
+  {
+    path: 'reinscripcion-a/:carnet',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
+  }
     path: 'semestre/:carnet',
     loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
   },
@@ -108,7 +116,6 @@ const routes: Routes = [
     path: 'listasemestre/:carnet',
     loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
   }
-
 
 ];
 

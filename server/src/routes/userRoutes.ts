@@ -28,6 +28,10 @@ class userRoutes {
         this.router.get('/create-curso',UserController.list_curso) // lista cursos
         //Obtener historial_cuenta
         this.router.get('/historial_cuenta/:carnet',UserController.historial_cuenta); //Obtener el perfil del usuario con su carnet
+
+        //Reinscripcion de Ciclo
+        this.router.post('/reinscripcion',UserController.reinscripcion); // Reinscripcion
+
     }
 
 }

@@ -2,7 +2,7 @@ import {Component, HostBinding, OnInit} from '@angular/core';
 import {GlobalService} from '../../servicios/global.service';
 
 import {SuficienciaService} from '../../servicios/suficiencia.service';
-import {Suficiencia} from "../../Modelos/Suficiencia";
+import {Suficiencia} from '../../Modelos/Suficiencia';
 
 @Component({
   selector: 'app-listapagos',

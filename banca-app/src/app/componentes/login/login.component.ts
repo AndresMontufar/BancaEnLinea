@@ -47,6 +47,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  f(){
+    this.router.navigate([`/reinscripcion-a`])
+  }
+
   async presentAlert(title, message) {
     const alert = await this.alertController.create({
       header: title,
