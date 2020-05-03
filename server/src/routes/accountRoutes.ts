@@ -23,7 +23,7 @@ class accountRoutes {
 
         this.router.post('/asignar-vacas',AccountController.create_vacas); // asignar curso de vacas
 
-        this.router.post('/asignar-retra',AccountController.create_retrasada); // asignar retrasada
+        this.router.post('/asignar-retra',AccountController.crete_retrasada); // asignar retrasada
 
         this.router.get('/create-sufis',AccountController.list_pagos); // listado de pagos
 

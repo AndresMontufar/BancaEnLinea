@@ -51,6 +51,17 @@ class accountController {
             res.json({ text: 'asignacion escuela de vacaciones exitosa' });
         });
     }
+    crete_retrasada(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            const no_cuenta = req.body.no_cuenta;
+            const curso = req.body.curso;
+            const descripcion = req.body.descripcion;
+            const fecha = req.body.fecha;
+            yield database_1.default.query('INSERT INTO banca.historial_pagos (no_cuenta,tipo_id,monto,curso,descripcion,fecha) values (?,1,10,?,?,?)', [no_cuenta, curso, descripcion, fecha]);
+            res.json({ text: 'pago de retrasada agregado' });
+        });
+    }
     list_pagos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const curso = yield database_1.default.query('SELECT * FROM  banca.historial_pagos');
