@@ -34,8 +34,8 @@ export class ReinscripcionAPage implements OnInit {
   }
 
   pagar(){
-    this.router.navigate([`/home/${this.global.carne}`])
     console.log(this.reinscripciones)
+    this.router.navigate([`/home/${this.global.carne}`])
   }
 
 }

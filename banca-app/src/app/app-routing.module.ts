@@ -95,6 +95,10 @@ const routes: Routes = [
   {
     path: 'reinscripcion-a',
     loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
+  },
+  {
+    path: 'reinscripcion-a/:carnet',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
   }
 
 ];
