@@ -26,6 +26,7 @@ class userRoutes {
         this.router.post('/reinscripcion', userController_1.UserController.reinscripcion); // Reinscripcion
         //inscripcion nuevo alumno
         this.router.post('/inscripcion', userController_1.UserController.inscripcion_nuevos); // inscripcion
+
     }
 }
 const UserRoutes = new userRoutes();

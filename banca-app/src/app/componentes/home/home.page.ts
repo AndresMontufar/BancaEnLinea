@@ -52,6 +52,10 @@ export class HomePage implements OnInit{
 
   }
 
+  Historial(){
+    this.router.navigate([`/historial-cuenta/${this.global.carne}`])
+  }
+
 
 }
 function delay(ms: number) {

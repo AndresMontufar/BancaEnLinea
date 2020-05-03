@@ -123,7 +123,8 @@ class userController {
                 + ' where c.usuario_carnet = ?'
                 + ' and c.no_cuenta = h.no_cuenta'
                 + ' and h.tipo_id = t.id'
-                + ' and h.curso = cc.codigo', [carnet]);
+                + ' and h.curso = cc.codigo'
+                + ' order by h.fecha desc', [carnet]);
             if (response.length > 0) {
                 res.json(response);
             }
@@ -147,6 +148,7 @@ class userController {
             res.json({ text: 'Usuario Reinscrito' });
         });
     }
+
     inscripcion_nuevos(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
@@ -162,5 +164,6 @@ class userController {
             res.json({ text: 'Usuario inscrito' });
         });
     }
+
 }
 exports.UserController = new userController();
