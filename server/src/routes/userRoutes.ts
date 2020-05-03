@@ -32,6 +32,8 @@ class userRoutes {
         //Reinscripcion de Ciclo
         this.router.post('/reinscripcion',UserController.reinscripcion); // Reinscripcion
 
+        //inscripcion nuevo alumno
+        this.router.post('/inscripcion',UserController.inscripcion_nuevos); // inscripcion
     }
 
 }
