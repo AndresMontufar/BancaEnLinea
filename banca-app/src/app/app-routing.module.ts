@@ -117,6 +117,11 @@ const routes: Routes = [
     path: 'listasemestre/:carnet',
     loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
   },
+  {
+    path: 'historial-cuenta/:carnet',
+    loadChildren: () => import('./componentes/historial-cuenta/historial-cuenta.module').then( m => m.HistorialCuentaPageModule)
+  },
+
 
 ];
 
