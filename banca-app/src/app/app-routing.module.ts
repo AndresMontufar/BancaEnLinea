@@ -91,7 +91,12 @@ const routes: Routes = [
   {
     path: 'reembolso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/reembolso-vacaciones/reembolso-vacaciones.module').then( m => m.ReembolsoVacacionesPageModule)
+  },
+  {
+    path: 'reinscripcion-a',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
   }
+
 ];
 
 @NgModule({
