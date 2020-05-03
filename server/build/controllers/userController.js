@@ -107,7 +107,11 @@ class userController {
             const curso = req.body.curso;
             const descripcion = req.body.descripcion;
             const fecha = new Date();
+            const usuario = req.body.user;
+            const curso_sem = req.body.curso_sem;
             yield database_1.default.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, curso = ?, descripcion = ?, fecha = ?', [numeroCuenta, 4, monto, curso, descripcion, fecha]);
+            // Desasignar el curso
+            yield database_1.default.query('DELETE FROM banca.asignacion WHERE usuario = ? AND curso_semestre = ?', [usuario, curso_sem]);
             res.json({ text: 'Reembolso Registrado' });
         });
     }

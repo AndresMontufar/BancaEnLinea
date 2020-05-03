@@ -53,7 +53,7 @@ class assignmentController{
     }
 
     public async all_courses_vacation(req: Request, res:Response):Promise<void>{
-        const curso= await pool.query('SELECT CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion,F.descripcion FROM fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre INNER JOIN curso C ON C.codigo = CS.curso WHERE  F.idfecha_asignacion=2')
+        const curso= await pool.query('SELECT CS.idcursos_semestre, CS.curso, C.nombre, CS.seccion,F.descripcion, CS.precio FROM fecha_asignacion F INNER JOIN cursos_semestre CS ON F.idfecha_asignacion =  CS.semestre INNER JOIN curso C ON C.codigo = CS.curso WHERE  F.idfecha_asignacion=2')
         res.json(curso);
     }
 }
