@@ -115,5 +115,37 @@ class userController {
             res.json({ text: 'Reembolso Registrado' });
         });
     }
+    historial_cuenta(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const response = yield database_1.default.query('select h.no_cuenta, t.nombre, h.monto, cc.nombre, h.descripcion, h.fecha'
+                + ' from historial_pagos h, cuenta c, tipo_pago t, curso cc'
+                + ' where c.usuario_carnet = ?'
+                + ' and c.no_cuenta = h.no_cuenta'
+                + ' and h.tipo_id = t.id'
+                + ' and h.curso = cc.codigo', [carnet]);
+            if (response.length > 0) {
+                res.json(response);
+            }
+            else {
+                res.send(false);
+            }
+        });
+    }
+    reinscripcion(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(req.body);
+            const no_cuenta = req.body.no_cuenta;
+            const monto = req.body.monto;
+            const fecha = new Date();
+            yield database_1.default.query('INSERT INTO banca.historial_pagos set no_cuenta = ?, tipo_id = ?, monto = ?, descripcion = ?, fecha = ?', [no_cuenta, 5, monto, 'Reinscripcion de ciclo', fecha]);
+            yield database_1.default.query('UPDATE banca.usuario u'
+                + ' INNER JOIN cuenta c ON c.usuario_carnet = u.carnet'
+                + ' INNER JOIN historial_pagos h ON h.no_cuenta = c.no_cuenta'
+                + ' SET u.habilitado = 1'
+                + ' WHERE h.no_cuenta = ?', [no_cuenta]);
+            res.json({ text: 'Usuario Reinscrito' });
+        });
+    }
 }
 exports.UserController = new userController();

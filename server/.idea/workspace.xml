@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="" />
-
+    <list default="true" id="ddbfd7b2-6d30-43b9-a3ce-539d359fcb15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,17 +61,13 @@
       <workItem from="1583430840212" duration="2843000" />
       <workItem from="1583816349971" duration="1002000" />
       <workItem from="1583817853235" duration="1891000" />
-
       <workItem from="1585838573252" duration="598000" />
       <workItem from="1586226998802" duration="2937000" />
       <workItem from="1586319367068" duration="3388000" />
       <workItem from="1586395295259" duration="881000" />
       <workItem from="1586405857184" duration="527000" />
-
       <workItem from="1586398996524" duration="2152000" />
-
       <workItem from="1586403240030" duration="776000" />
-
     </task>
     <task id="LOCAL-00001" summary="Revision">
       <created>1586400967854</created>
