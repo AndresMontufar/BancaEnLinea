@@ -4,6 +4,7 @@ import {SuficienciaService} from '../../servicios/suficiencia.service';
 import {GlobalService} from '../../servicios/global.service';
 import {Router} from '@angular/router';
 import {AlertController} from '@ionic/angular';
+import {ReinscripcionService} from '../../servicios/reinscripcion.service';
 
 @Component({
   selector: 'app-reinscripcion-a',
@@ -13,13 +14,13 @@ import {AlertController} from '@ionic/angular';
 export class ReinscripcionAPage implements OnInit {
   reinscripciones: Reinscripciones = {
     no_cuenta: 0,
-    cantidad: 91
+    monto: 91
   }
 
   cuentas: any = []
 
   constructor(private global: GlobalService, private suficienciaServices: SuficienciaService,
-              private router : Router, public alertController: AlertController) { }
+              private router : Router, public alertController: AlertController, private reinscripcionservice: ReinscripcionService) { }
 
   async ngOnInit() {
     await delay(500);
@@ -33,9 +34,22 @@ export class ReinscripcionAPage implements OnInit {
     await delay(500);
   }
 
-  pagar(){
+  async pagar() {
     console.log(this.reinscripciones)
+    await delay(500);
+    this.reinscripcionservice.Asign(this.reinscripciones)
+    await delay(500);
+    this.presentAlert('Reinscripcion', 'Exito..')
     this.router.navigate([`/home/${this.global.carne}`])
+  }
+
+  async presentAlert(title, message) {
+    const alert = await this.alertController.create({
+      header: title,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
   }
 
 }

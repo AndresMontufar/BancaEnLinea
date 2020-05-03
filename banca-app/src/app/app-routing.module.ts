@@ -104,7 +104,8 @@ const routes: Routes = [
   {
     path: 'reinscripcion-a/:carnet',
     loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
-  }
+  },
+  {
     path: 'semestre/:carnet',
     loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
   },
@@ -115,7 +116,7 @@ const routes: Routes = [
   {
     path: 'listasemestre/:carnet',
     loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
-  }
+  },
 
 ];
 

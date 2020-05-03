@@ -34,7 +34,7 @@ export class SemestrePage implements OnInit {
     this.retrasericio.getCursos().subscribe(
         res => {
           this.cursos = res;
-          console.log(this.cursos)
+          //console.log(this.cursos)
         },
         err => console.error(err)
     )
@@ -44,7 +44,7 @@ export class SemestrePage implements OnInit {
     this.retrasericio.getCuentas(this.global.carne).subscribe(
         res => {
           this.cuentas = res;
-          console.log(this.cuentas)
+          //console.log(this.cuentas)
         },
         err => console.error(err)
     )
