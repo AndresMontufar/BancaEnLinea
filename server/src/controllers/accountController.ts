@@ -50,6 +50,20 @@ class accountController {
         res.json({text: 'asignacion escuela de vacaciones exitosa'});
     }
 
+    public async crete_retrasada (req: Request, res:Response):Promise<void>{
+        console.log(req.body);
+
+        const no_cuenta = req.body.no_cuenta;
+        const curso = req.body.curso;
+        const descripcion = req.body.descripcion;
+        const fecha = req.body.fecha;
+        await pool.query('INSERT INTO banca.historial_pagos (no_cuenta,tipo_id,monto,curso,descripcion,fecha) values (?,1,10,?,?,?)',
+            [no_cuenta,curso,descripcion,fecha]);
+
+        res.json({text: 'pago de retrasada agregado'});
+    }
+
+
     public async list_pagos(req: Request, res:Response):Promise<void>{
 
         const curso= await pool.query('SELECT * FROM  banca.historial_pagos');

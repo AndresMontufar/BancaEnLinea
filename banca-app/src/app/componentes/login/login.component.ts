@@ -3,6 +3,7 @@ import {Login} from '../../Modelos/Login';
 import {LoginService} from '../../servicios/login.service'
 import {Router} from '@angular/router';
 import {AlertController} from '@ionic/angular';
+import {GlobalService} from '../../servicios/global.service';
 
 @Component({
   selector: 'app-login',
@@ -23,13 +24,14 @@ export class LoginComponent implements OnInit {
   };
 
   constructor(private loginService: LoginService, private router : Router,
-              public alertController: AlertController) { }
+              public alertController: AlertController, private global: GlobalService) { }
 
   ngOnInit() {
 
   }
 
   validateLogin(){
+    this.global.carne = this.carne;
     if(this.password !== '' && this.carne){
       this.request = this.newLogin(this.carne, this.password);
       this.loginService.Login(this.request).subscribe(
@@ -45,6 +47,10 @@ export class LoginComponent implements OnInit {
           error => console.error(error)
       )
     }
+  }
+
+  f(){
+    this.router.navigate([`/reinscripcion-a`])
   }
 
   async presentAlert(title, message) {

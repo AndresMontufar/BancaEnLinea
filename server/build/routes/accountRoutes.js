@@ -13,6 +13,7 @@ class accountRoutes {
         this.router.get('/get-account/:carnet', accountController_1.AccountController.get_account); // obtener cuenta
         this.router.post('/create-sufis', accountController_1.AccountController.create_sufis); // pagar una suficiencia
         this.router.post('/asignar-vacas', accountController_1.AccountController.create_vacas); // asignar curso de vacas
+        this.router.post('/asignar-retra', accountController_1.AccountController.crete_retrasada); // asignar retrasada
         this.router.get('/create-sufis', accountController_1.AccountController.list_pagos); // listado de pagos
         this.router.get('/listado-vacas/:carnet', accountController_1.AccountController.list_vacas); // listado de cursos asignados vacas
     }

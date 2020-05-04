@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import {Login} from '../Modelos/Login'
 import {GlobalService} from "./global.service";
 
 const httpOptions = {
@@ -12,13 +11,13 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class HistorialCuentaService {
 
   private API = 'http://54.200.138.95:3000/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,  public global: GlobalService) { }
 
-  public Login(request : Login){
-    return this.http.post(`${this.API}`, request, httpOptions);
+  public getHistorial(){
+    return this.http.get(`${this.API}api/user/historial_cuenta/${this.global.carne}`, httpOptions);
   }
-}
+ }

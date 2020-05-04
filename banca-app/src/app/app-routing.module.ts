@@ -73,6 +73,10 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/vacaciones/vacaciones.module').then(m => m.VacacionesPageModule)
   },
   {
+    path: 'semestre',
+    loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
+  },
+  {
     path: 'cambio-curso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/cambio-curso-vacaciones/cambio-curso-vacaciones.module').then(m => m.CambioCursoVacacionesPageModule)
   },
@@ -91,7 +95,34 @@ const routes: Routes = [
   {
     path: 'reembolso-vacaciones/:carnet',
     loadChildren: () => import('./componentes/reembolso-vacaciones/reembolso-vacaciones.module').then( m => m.ReembolsoVacacionesPageModule)
-  }
+  },
+  {
+
+    path: 'reinscripcion-a',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
+  },
+  {
+    path: 'reinscripcion-a/:carnet',
+    loadChildren: () => import('./componentes/reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)
+  },
+  {
+    path: 'semestre/:carnet',
+    loadChildren: () => import('./componentes/semestre/semestre.module').then(m => m.SemestrePageModule)
+  },
+  {
+    path: 'listasemestre',
+    loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
+  },
+  {
+    path: 'listasemestre/:carnet',
+    loadChildren: () => import('./componentes/listasemestre/listasemestre.module').then(m => m.ListasemestrePageModule)
+  },
+  {
+    path: 'historial-cuenta/:carnet',
+    loadChildren: () => import('./componentes/historial-cuenta/historial-cuenta.module').then( m => m.HistorialCuentaPageModule)
+  },
+
+
 ];
 
 @NgModule({

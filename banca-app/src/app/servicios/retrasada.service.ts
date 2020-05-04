@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Suficiencia} from '../Modelos/vacasiones';
+import {Retrasada} from '../Modelos/retrasada';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -41,5 +42,9 @@ export class RetrasadaService {
 
   registrar(request: Suficiencia) {
     return this.http.post(`${this.API}api/account/asignar-vacas`, request, httpOptions);
+  }
+
+  public Asign(retra: Retrasada) {
+    return this.http.post(`${this.API}api/account/create-retrasada`, retra);
   }
 }
