@@ -24,6 +24,14 @@
               <h3>{{item.title}}</h3>
             </ion-label>
           </ion-item>
+        <button (click)="exit()">
+          <ion-item>
+            <ion-icon slot="start" [name]="icones" [ngStyle]="{'color': '#FFD439'}">alert</ion-icon>
+            <ion-label>
+              <h3>Logout</h3>
+            </ion-label>
+          </ion-item>
+        </button>
 
       </ion-list>
 

@@ -10,13 +10,13 @@ export class MenuVacacionesPage implements OnInit {
 
 
   public  items = [
-    {
+    /*{
       title: 'Listado de cursos asignados',
       icon: 'md-checkmark-circle-outline',
       description: 'Ver los cursos asignados.',
       color: '#E63135',
       url: '#'
-    },
+    },*/
     {
       title: 'Cambiar un curso ya asignado',
       icon: 'checkbox-outline',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GlobalService} from '../../servicios/global.service'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-listapagos',
@@ -37,17 +38,24 @@ export class ListapagosPage implements OnInit {
       color: '#F46529',
       url: '/retrasada'
     },
-    {
-      title: 'Varios',
+    /*{
+      title: 'Logout',
       icon: 'alert',
-      description: 'Pagos Varios',
+      description: 'Logout',
       color: '#FFD439',
-      url: '#'
-    },
+      url: '/'
+    },*/
     
   ];
 
-  constructor(private global: GlobalService) { }
+  public icones= 'refresh'
+  constructor(private router : Router, private global: GlobalService) { }
+
+  exit(){
+    //navigator['app'].exitApp();
+    this.global.carne = null;
+    this.router.navigate([`/home/${this.global.carne}`])
+  }
 
   ngOnInit() {
   }

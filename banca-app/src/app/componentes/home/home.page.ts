@@ -30,6 +30,10 @@ export class HomePage implements OnInit{
   }
 
   async ngOnInit(){
+    if(this.global.carne === null){
+      this.router.navigate([`/`])
+    }
+
     await delay(500);
     this.sub = this.route.params.subscribe(params => {
       this.global.carne = +params['carnet'];

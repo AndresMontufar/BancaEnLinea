@@ -19,7 +19,7 @@
       <ion-card-subtitle><h3 style="color: white"><b>Curso disponible:</b></h3></ion-card-subtitle>
       <ion-item>
 
-        <ion-select [(ngModel)]="this.retra.curso" placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+        <ion-select [(ngModel)]="Reembolso.curso" placeholder="Seleccionar curso" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
           <ion-select-option *ngFor="let item of cursos" [value]="item.codigo">
             {{item.nombre}}
           </ion-select-option>
@@ -28,7 +28,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-select [(ngModel)]="this.retra.no_cuenta" placeholder="Seleccionar cuenta" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
+        <ion-select [(ngModel)]="Reembolso.no_cuenta" placeholder="Seleccionar cuenta" style="color: black; display: flex; background-color: rgba(255, 255, 255, 0.64)">
           <ion-select-option *ngFor="let item of cuentas" [value]="item.no_cuenta">
             {{item.no_cuenta}}
           </ion-select-option>
