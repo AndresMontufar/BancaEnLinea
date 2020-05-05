@@ -53,6 +53,14 @@ describe('RegistroUsuarioComponent', () => {
     }));
   });
 
+  describe('simulate alert', () => {
+    it('should show alert', fakeAsync(() => {
+      component.presentAlert('asdf', 'asdf')
+      tick(500);
+      expect(true).toBeTruthy();
+    }));
+  });
+
   describe('register', () => {
     it('should handle error', fakeAsync(() => {
       component.contra2 = 'asdf'

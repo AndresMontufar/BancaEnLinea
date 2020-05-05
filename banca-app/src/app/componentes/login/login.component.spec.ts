@@ -44,6 +44,14 @@ describe('LoginComponent', () => {
     }));
   });
 
+  describe('simulate alert', () => {
+    it('should show alert', fakeAsync(() => {
+      component.presentAlert('asdf', 'asdf')
+      tick(1000);
+      expect(true).toBeTruthy();
+    }));
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
