@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
+                <span class="strong">57.89% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/20</span>
+                <span class='fraction'>11/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.65% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/17</span>
+                <span class='fraction'>8/16</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,11 +121,7 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,7 +140,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,16 +156,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -174,10 +170,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,25 +204,25 @@ export class LoginComponent implements OnInit {
   password: string;
   request: Login;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  newLogin(</span>carne, password) : Login{
-<span class="cstat-no" title="statement not covered" >    return{</span>
+  newLogin(carne, password) : Login{
+    return{
       carnet: carne,
       contrasena: password
     }
   };
 &nbsp;
-  constructor(private loginService: LoginService, private router : Router,
-              public alertController: AlertController, private global: GlobalService) { }
+  constructor(private loginService: LoginService, public router : Router,
+              public alertController: AlertController, public global: GlobalService) { }
 &nbsp;
   ngOnInit() {
 &nbsp;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  validateLogin(</span>){
-<span class="cstat-no" title="statement not covered" >    this.global.carne = this.carne;</span>
-<span class="cstat-no" title="statement not covered" >    if(this.password !== '' &amp;&amp; this.carne){</span>
-<span class="cstat-no" title="statement not covered" >      this.request = this.newLogin(this.carne, this.password);</span>
-<span class="cstat-no" title="statement not covered" >      this.loginService.Login(this.request).subscribe(</span>
+  validateLogin(){
+    this.global.carne = this.carne;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(this.password !== '' &amp;&amp; this.carne){
+      this.request = this.newLogin(this.carne, this.password);
+      this.loginService.Login(this.request).subscribe(
 <span class="fstat-no" title="function not covered" >          res </span>=&gt;{
 <span class="cstat-no" title="statement not covered" >            console.log(res);</span>
 <span class="cstat-no" title="statement not covered" >            if(res === true){</span>
@@ -243,10 +235,6 @@ export class LoginComponent implements OnInit {
 <span class="fstat-no" title="function not covered" >          error </span>=&gt; <span class="cstat-no" title="statement not covered" >console.error(error)</span>
       )
     }
-  }
-&nbsp;
-<span class="fstat-no" title="function not covered" >  f(</span>){
-<span class="cstat-no" title="statement not covered" >    this.router.navigate([`/reinscripcion-a`])</span>
   }
 &nbsp;
   async <span class="fstat-no" title="function not covered" >presentAlert(</span>title, message) {
@@ -270,7 +258,7 @@ export class LoginComponent implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 04 2020 22:00:32 GMT-0600 (GMT-06:00)
+                at Mon May 04 2020 23:59:52 GMT-0600 (GMT-06:00)
             </div>
         </div>
         <script src="..\..\..\..\prettify.js"></script>

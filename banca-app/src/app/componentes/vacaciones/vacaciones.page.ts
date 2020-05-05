@@ -25,7 +25,7 @@ export class VacacionesPage implements OnInit {
   fechas: number;
 
   constructor(private retrasericio: RetrasadaService, public alertController: AlertController,
-              private global: GlobalService) { }
+              public global: GlobalService) { }
 
 
 

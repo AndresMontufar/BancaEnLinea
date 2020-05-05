@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { LoginComponent } from './login.component';
@@ -17,7 +17,9 @@ describe('LoginComponent', () => {
 
   const routes : Routes = [
     {path: 'home/:id', loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)},
-    {path: 'Registro', component: RegistroUsuarioComponent}
+    {path: 'Registro', component: RegistroUsuarioComponent},
+    {path: 'reinscripcion-a', loadChildren: () => import('../reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)},
+    {path: 'reinscripcion-a/:carne', loadChildren: () => import('../reinscripcion-a/reinscripcion-a.module').then(m => m.ReinscripcionAPageModule)}
   ]
 
   beforeEach(async(() => {
@@ -31,6 +33,16 @@ describe('LoginComponent', () => {
     service = TestBed.get(LoginService);
     fixture.detectChanges();
   }));
+
+  describe('validate Login', () => {
+    it('should redirect', fakeAsync(() => {
+      component.password = '123'
+      component.carne = 1111
+      component.validateLogin()
+      tick(50);
+      expect(true).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

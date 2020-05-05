@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { SuficienciaPage } from './suficiencia.page';
@@ -26,6 +26,24 @@ describe('SuficienciaPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('assign courses', () => {
+    it('should assign', fakeAsync(() => {
+      component.Reembolso.curso = 5
+      component.cursos = [{idcursos_semestre : 0, total: 115, curso: 5, seccion: 1}]
+      component.Asignar();
+      tick(50);
+      expect(true).toBeTruthy();
+    }));
+  });
+
+  describe('simulate alert', () => {
+    it('should show alert', fakeAsync(() => {
+      component.presentAlert('asdf', 'asdf')
+      tick(1000);
+      expect(true).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

@@ -23,7 +23,7 @@ export class PerfilPage implements OnInit {
     bloqueado: string;
     request: crearusuario;
 
-  constructor(private perfilUsuarioServic: PerfilUsuarioService, private global: GlobalService, private router : Router,
+  constructor(private perfilUsuarioServic: PerfilUsuarioService, private global: GlobalService, public router : Router,
               public alertController: AlertController) { }
 
   ngOnInit() {
@@ -33,18 +33,22 @@ export class PerfilPage implements OnInit {
       this.perfilUsuarioServic.datos(this.global.carne).subscribe(
       res =>{
           console.log(res)
-          this.carnet1 = +res[0].carnet
-          this.nombre1 = res[0].nombre
-          this.apellido1 = res[0].apellido
-          this.dpi1 = +res[0].dpi
-          this.correo1 = res[0].correo
-          this.fecha_nac1 = new Date(res[0].fecha_nac).getFullYear().toString() + '-' + (new Date(res[0].fecha_nac).getMonth()+1).toString() +'-' + (new Date(res[0].fecha_nac).getDate()+1).toString()
-          console.log(this.fecha_nac1)
-          this.contrasena1 = res[0].contrasena
-          this.habilitado1 = +res[0].habilitado
+          this.setInfo(res)
       },
       error => console.error(error)
       )
+  }
+
+  setInfo(res){
+      this.carnet1 = +res[0].carnet
+      this.nombre1 = res[0].nombre
+      this.apellido1 = res[0].apellido
+      this.dpi1 = +res[0].dpi
+      this.correo1 = res[0].correo
+      this.fecha_nac1 = new Date(res[0].fecha_nac).getFullYear().toString() + '-' + (new Date(res[0].fecha_nac).getMonth()+1).toString() +'-' + (new Date(res[0].fecha_nac).getDate()+1).toString()
+      console.log(this.fecha_nac1)
+      this.contrasena1 = res[0].contrasena
+      this.habilitado1 = +res[0].habilitado
   }
 
 

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { InscriptionComponent } from './inscription.component';
@@ -19,6 +19,29 @@ describe('InscriptionComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('clear fields', () => {
+    it('should clear', fakeAsync(() => {
+      component.clearFields()
+      tick(50);
+      expect(component.carnet).toBeDefined();
+    }));
+  });
+
+  describe('register inscription', () => {
+    it('should register', fakeAsync(() => {
+      component.carnet = 123
+      component.date = '2020-05-2'
+      component.name = ''
+      component.lastName = 'asdf'
+      component.dpi = 21212
+      component.email = ''
+      component.date = ''
+      component.Register()
+      tick(50);
+      expect(component.carnet).toBeDefined();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

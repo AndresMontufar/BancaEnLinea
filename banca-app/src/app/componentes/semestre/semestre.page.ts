@@ -25,7 +25,7 @@ export class SemestrePage implements OnInit {
   }
 
   constructor(private retrasericio: RetrasadaService, public alertController: AlertController,
-              private global: GlobalService, private semestreservice: SemestreService) { }
+              public global: GlobalService, private semestreservice: SemestreService) { }
 
   async ngOnInit() {
 

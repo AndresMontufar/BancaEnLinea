@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">21.05% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.76% </span>
+                <span class="strong">70.59% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/17</span>
+                <span class='fraction'>12/17</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -148,25 +148,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -186,13 +186,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,8 +217,8 @@ export class InscriptionComponent implements OnInit {
   dpi: number
   request: crearusuario;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  newUser(</span>carnet, name, lastName, dpi, email, password, date, active) : crearusuario{
-<span class="cstat-no" title="statement not covered" >    return{</span>
+  newUser(carnet, name, lastName, dpi, email, password, date, active) : crearusuario{
+    return{
       carnet: carnet,
       nombre: name,
       apellido: lastName,
@@ -234,9 +234,9 @@ export class InscriptionComponent implements OnInit {
 &nbsp;
   ngOnInit() {}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  Register(</span>){
-<span class="cstat-no" title="statement not covered" >    this.request = this.newUser(this.carnet, this.name, this.lastName, this.dpi, this.email, 'password', this.date, true)</span>
-<span class="cstat-no" title="statement not covered" >    this.Usuarioservice.registrar(this.request).subscribe(</span>
+  Register(){
+    this.request = this.newUser(this.carnet, this.name, this.lastName, this.dpi, this.email, 'password', this.date, true)
+    this.Usuarioservice.registrar(this.request).subscribe(
 <span class="fstat-no" title="function not covered" >        res </span>=&gt;{
 <span class="cstat-no" title="statement not covered" >          this.presentAlert();</span>
 <span class="cstat-no" title="statement not covered" >          this.clearFields();</span>
@@ -255,14 +255,14 @@ export class InscriptionComponent implements OnInit {
 <span class="cstat-no" title="statement not covered" >    await alert.present();</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  clearFields(</span>){
-<span class="cstat-no" title="statement not covered" >    this.carnet = 0;</span>
-<span class="cstat-no" title="statement not covered" >    this.dpi = 0;</span>
-<span class="cstat-no" title="statement not covered" >    this.email = '';</span>
-<span class="cstat-no" title="statement not covered" >    this.lastName = '';</span>
-<span class="cstat-no" title="statement not covered" >    this.name = '';</span>
-<span class="cstat-no" title="statement not covered" >    this.date = '';</span>
-<span class="cstat-no" title="statement not covered" >    this.transaction = 0;</span>
+  clearFields(){
+    this.carnet = 0;
+    this.dpi = 0;
+    this.email = '';
+    this.lastName = '';
+    this.name = '';
+    this.date = '';
+    this.transaction = 0;
   }
 &nbsp;
 }
@@ -273,7 +273,7 @@ export class InscriptionComponent implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 04 2020 22:00:32 GMT-0600 (GMT-06:00)
+                at Mon May 04 2020 23:59:52 GMT-0600 (GMT-06:00)
             </div>
         </div>
         <script src="..\..\..\..\prettify.js"></script>

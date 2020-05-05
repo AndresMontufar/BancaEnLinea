@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  constructor(private loginService: LoginService, private router : Router,
-              public alertController: AlertController, private global: GlobalService) { }
+  constructor(private loginService: LoginService, public router : Router,
+              public alertController: AlertController, public global: GlobalService) { }
 
   ngOnInit() {
 
@@ -47,10 +47,6 @@ export class LoginComponent implements OnInit {
           error => console.error(error)
       )
     }
-  }
-
-  f(){
-    this.router.navigate([`/reinscripcion-a`])
   }
 
   async presentAlert(title, message) {

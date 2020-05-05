@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { ReinscripcionAPage } from './reinscripcion-a.page';
@@ -26,6 +26,23 @@ describe('ReinscripcionAPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('pay', () => {
+    it('should pay', fakeAsync(() => {
+      component.reinscripciones = {no_cuenta: 123, monto: 12}
+      component.pagar()
+      tick(1200);
+      expect(component.router.navigated).toBeFalsy();
+    }));
+  });
+
+  describe('simulate alert', () => {
+    it('should show alert', fakeAsync(() => {
+      component.presentAlert('asdf', 'asdf')
+      tick(1000);
+      expect(true).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

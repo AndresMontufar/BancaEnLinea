@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">21.05% </span>
+                <span class="strong">57.89% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/19</span>
+                <span class='fraction'>11/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">57.14% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>8/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/10</span>
+                <span class='fraction'>6/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">55.56% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/18</span>
+                <span class='fraction'>10/18</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -151,7 +151,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,14 +169,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,8 +182,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -198,13 +198,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -226,8 +226,8 @@ export class TransactionComponent implements OnInit {
   amount: number;
   carnet: number;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  newTransaction(</span>account, amount, deposit) : Transaction{
-<span class="cstat-no" title="statement not covered" >    return{</span>
+  newTransaction(account, amount, deposit) : Transaction{
+    return{
         no_cuenta: account,
         retiro: amount,
         deposito: deposit
@@ -241,9 +241,9 @@ export class TransactionComponent implements OnInit {
 &nbsp;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  Deposit(</span>){
-<span class="cstat-no" title="statement not covered" >    if(this.carnet &amp;&amp; this.amount &amp;&amp; this.carnet){</span>
-<span class="cstat-no" title="statement not covered" >      this.transaccionService.Deposit(this.newTransaction(this.account, 0, this.amount), this.carnet).subscribe(</span>
+  Deposit(){
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(this.carnet &amp;&amp; this.amount &amp;&amp; this.carnet){
+      this.transaccionService.Deposit(this.newTransaction(this.account, 0, this.amount), this.carnet).subscribe(
 <span class="fstat-no" title="function not covered" >          res </span>=&gt;{
 <span class="cstat-no" title="statement not covered" >            if(res===true){</span>
 <span class="cstat-no" title="statement not covered" >              this.presentAlert('Felicidades','Deposito efectuado con éxito')</span>
@@ -257,9 +257,9 @@ export class TransactionComponent implements OnInit {
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  Withdraw(</span>){
-<span class="cstat-no" title="statement not covered" >    if(this.carnet &amp;&amp; this.amount &amp;&amp; this.carnet){</span>
-<span class="cstat-no" title="statement not covered" >      this.transaccionService.Withdraw(this.newTransaction(this.account, this.amount, 0), this.carnet).subscribe(</span>
+  Withdraw(){
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(this.carnet &amp;&amp; this.amount &amp;&amp; this.carnet){
+      this.transaccionService.Withdraw(this.newTransaction(this.account, this.amount, 0), this.carnet).subscribe(
 <span class="fstat-no" title="function not covered" >          res </span>=&gt;{
 <span class="cstat-no" title="statement not covered" >            if(res===true){</span>
 <span class="cstat-no" title="statement not covered" >              this.presentAlert('Felicidades','Retiro efectuado con éxito')</span>
@@ -273,14 +273,14 @@ export class TransactionComponent implements OnInit {
     }
   }
 &nbsp;
-  async <span class="fstat-no" title="function not covered" >presentAlert(</span>title, message) {
-    const alert = <span class="cstat-no" title="statement not covered" >await this.alertController.create({</span>
+  async presentAlert(title, message) {
+    const alert = await this.alertController.create({
       header: title,
       message: message,
       buttons: ['OK']
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    await alert.present();</span>
+    await alert.present();
   }
 &nbsp;
 }
@@ -291,7 +291,7 @@ export class TransactionComponent implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 04 2020 22:00:32 GMT-0600 (GMT-06:00)
+                at Mon May 04 2020 23:59:52 GMT-0600 (GMT-06:00)
             </div>
         </div>
         <script src="..\..\..\..\prettify.js"></script>

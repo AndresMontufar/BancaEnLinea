@@ -77,19 +77,6 @@ export class RetrasadaPage implements OnInit {
   }
 
   retraasign() {
-    /*this.fechas = Date.now();
-
-    this.fecha = new Date(this.fechas).getFullYear().toString() + '-' + (new Date(this.fechas).getMonth() + 1).toString() + '-' + (new Date(this.fechas).getDate() + 1).toString()
-    //console.log(this.fecha);
-    this.retra.fecha = this.fecha;
-    await delay(500);
-
-    this.retrasericio.Asign(this.retra)
-
-    await delay(300);
-    this.presentAlert('Retrasada', 'Retrasada asignada')
-
-    this.router.navigate([`/home/${this.global.carne}`])*/
     for (const entry of this.cursos) {
       if (entry.curso == this.Reembolso.curso)
       {

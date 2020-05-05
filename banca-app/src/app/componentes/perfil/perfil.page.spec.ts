@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { PerfilPage } from './perfil.page';
@@ -28,6 +28,38 @@ describe('PerfilPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('set info', () => {
+    it('should assing', fakeAsync(() => {
+      component.setInfo([{}])
+      tick(50);
+      expect(component.carnet1).toBeDefined();
+    }));
+  });
+
+  describe('set info new user', () => {
+    it('should assing', fakeAsync(() => {
+      component.newUser(1, '','',1,'','','2020-01-05',1)
+      tick(50);
+      expect(true).toBeTruthy();
+    }));
+  });
+
+  describe('edit', () => {
+    it('should edit', fakeAsync(() => {
+      component.Modificar()
+      tick(50);
+      expect(component.router.navigated).toBeFalsy();
+    }));
+  });
+
+  describe('delete', () => {
+    it('should delete', fakeAsync(() => {
+      component.eliminar()
+      tick(50);
+      expect(component.router.navigated).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

@@ -35,7 +35,7 @@ export class RegistroUsuarioComponent implements OnInit {
     }
   };
 
-  constructor(private Usuarioservice: RegistroUsuarioService, private router : Router,
+  constructor(private Usuarioservice: RegistroUsuarioService, public router : Router,
               public alertController: AlertController) { }
 
   ngOnInit() {}

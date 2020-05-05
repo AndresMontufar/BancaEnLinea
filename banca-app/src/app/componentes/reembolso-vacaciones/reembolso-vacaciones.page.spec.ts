@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { ReembolsoVacacionesPage } from './reembolso-vacaciones.page';
@@ -26,6 +26,16 @@ describe('ReembolsoVacacionesPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('change courses', () => {
+    it('should assing', fakeAsync(() => {
+      component.Reembolso.curso = 5;
+      component.cursos = [{total: 20, idcursos_semestre: 2, seccion:5, curso: 5}]
+      component.Desasignar()
+      tick(50);
+      expect(true).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/app/componentes/historial-cuenta/historial-cuenta.page.ts</title>
+    <title>Code coverage report for src/app/componentes/reinscripcion-a/reinscripcion-a-routing.module.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\..\..\base.css" />
@@ -18,13 +18,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/componentes/historial-cuenta</a> historial-cuenta.page.ts</h1>
+        <h1><a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/componentes/reinscripcion-a</a> reinscripcion-a-routing.module.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.78% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/9</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/6</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -73,17 +73,13 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,49 +90,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
-import {GlobalService} from "../../servicios/global.service";
-import {AlertController} from "@ionic/angular";
-import {HistorialCuentaService} from "../../servicios/historial-cuenta.service";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 &nbsp;
-@Component({
-  selector: 'app-historial-cuenta',
-  templateUrl: './historial-cuenta.page.html',
-  styleUrls: ['./historial-cuenta.page.scss'],
-})
-export class HistorialCuentaPage implements OnInit {
-  Datos: any
+import { ReinscripcionAPage } from './reinscripcion-a.page';
 &nbsp;
-  constructor(private historialCuentaService: HistorialCuentaService , private global: GlobalService, public alertController: AlertController) { }
-&nbsp;
-  ngOnInit() {
-    this.obtener()
+const routes: Routes = [
+  {
+    path: '',
+    component: ReinscripcionAPage
   }
+];
 &nbsp;
-  obtener(){
-    this.historialCuentaService.getHistorial().subscribe(
-<span class="fstat-no" title="function not covered" >        res </span>=&gt;{
-<span class="cstat-no" title="statement not covered" >         console.log(res)</span>
-<span class="cstat-no" title="statement not covered" >          this.Datos = res</span>
-        })
-    }
-}
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+})
+export class ReinscripcionAPageRoutingModule {}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -144,7 +114,7 @@ export class HistorialCuentaPage implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 04 2020 23:59:52 GMT-0600 (GMT-06:00)
+                at Mon May 04 2020 23:21:10 GMT-0600 (GMT-06:00)
             </div>
         </div>
         <script src="..\..\..\..\prettify.js"></script>

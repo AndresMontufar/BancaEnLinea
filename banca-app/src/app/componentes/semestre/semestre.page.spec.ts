@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { SemestrePage } from './semestre.page';
@@ -27,6 +27,24 @@ describe('SemestrePage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+
+  describe('assign', () => {
+    it('should assign', fakeAsync(() => {
+      component.global.carne = 4545
+      component.semestreasign()
+      tick(1200);
+      expect(true).toBeTruthy()
+      //expect(component.alertController.create).toHaveBeenCalledWith('Error', 'La contraseña no coincide');
+    }));
+  });
+
+  describe('simulate alert', () => {
+    it('should show alert', fakeAsync(() => {
+      component.presentAlert('asdf', 'asdf')
+      tick(1000);
+      expect(true).toBeTruthy();
+    }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

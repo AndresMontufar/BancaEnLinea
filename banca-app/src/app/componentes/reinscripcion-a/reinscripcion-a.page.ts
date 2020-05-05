@@ -20,7 +20,7 @@ export class ReinscripcionAPage implements OnInit {
   cuentas: any = []
 
   constructor(private global: GlobalService, private suficienciaServices: SuficienciaService,
-              private router : Router, public alertController: AlertController, private reinscripcionservice: ReinscripcionService) { }
+              public router : Router, public alertController: AlertController, private reinscripcionservice: ReinscripcionService) { }
 
   async ngOnInit() {
     await delay(500);
