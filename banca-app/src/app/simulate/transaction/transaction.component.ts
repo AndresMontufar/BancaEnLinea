@@ -24,7 +24,7 @@ export class TransactionComponent implements OnInit {
     }
   }
 
-  constructor(private router : Router, private transaccionService : TransaccionService,
+  constructor(private transaccionService : TransaccionService,
               public alertController: AlertController) { }
 
   ngOnInit() {

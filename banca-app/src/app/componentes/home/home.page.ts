@@ -26,7 +26,7 @@ export class HomePage implements OnInit{
   }
 
   constructor(private route: ActivatedRoute, private global: GlobalService, private accountService: CuentaService,
-              private router : Router) {
+              public router : Router) {
   }
 
   async ngOnInit(){
